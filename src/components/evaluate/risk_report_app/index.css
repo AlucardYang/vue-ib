@@ -1,0 +1,753 @@
+.color-bg {
+  overflow: hidden;
+  background-image: linear-gradient(-178deg, #1D65DB 0%, #E9F4FF 12%, #EAF4FF 20%, #86F2CB 29%, #9FF3FF 39%, #FFDDAD 55%, #E2ABBA 63%, #B2BAFF 70%, #F6F6F6 87%, #F6F6F6 97%);
+}
+
+.risk-evaluation-summary {
+    position: relative;
+    width: 100%;
+    height: 4.80rem;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+
+/*--------------------------------------------
+ *
+ *@Name：风险等级：较低、一般、较高、极高
+ *
+ *--------------------------------------------*/
+
+.risk-animate-frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.risk-animate-frame img,
+.risk-animate-frame em {
+    position: absolute;
+    display: block;
+}
+
+
+/*--风险较低--*/
+
+.risk_rank_00_01_frame {
+    position: absolute;
+    width: .5rem;
+    height: .5rem;
+    top: .85rem;
+    right: .3rem;
+    animation: 50s animate_risk_rank_00_01;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+em.risk_rank_00_01 {
+    width: .5rem;
+    height: .5rem;
+    background: #FFDF00;
+    border-radius: 100%;
+    box-shadow: 0 0 1rem .2rem #fff;
+}
+
+@keyframes animate_risk_rank_00_01 {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+
+img.risk_rank_00_00 {
+    width: .4rem;
+    top: 2.15rem;
+    left: 2.5rem;
+    transform: rotate(0deg);
+    animation: 10s animate_risk_rank_00_00;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+
+@keyframes animate_risk_rank_00_00 {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(20deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(-20deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+img.risk_rank_00_02 {
+    width: .3rem;
+    top: .8rem;
+    transform: translate3d(.5rem, 0, 0);
+    animation: 50s animate_risk_rank_00_02;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(.23, 0, 1, .8);
+}
+
+@keyframes animate_risk_rank_00_02 {
+    0% {
+        transform: translate3d(.5rem, 0, 0);
+    }
+    15% {
+        transform: translate3d(-1rem, 0, 0);
+    }
+    60% {
+        transform: translate3d(3.75rem, 0, 0);
+    }
+    100% {
+        transform: translate3d(.5rem, 0, 0);
+    }
+}
+
+img.risk_rank_00_03 {
+    width: .5rem;
+    top: 1.2rem;
+    transform: translate3d(1.3rem, 0, 0);
+    animation: 30s animate_risk_rank_00_03;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(.23, 0, 1, .8);
+}
+
+@keyframes animate_risk_rank_00_03 {
+    0% {
+        transform: translate3d(1.3rem, 0, 0);
+    }
+    100% {
+        transform: translate3d(-1rem, 0, 0);
+    }
+}
+
+img.risk_rank_00_04 {
+    width: .65rem;
+    top: 1.15rem;
+    transform: translate3d(1.8rem, 0, 0);
+    animation: 40s animate_risk_rank_00_04;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(.23, 0, 1, .8);
+}
+
+@keyframes animate_risk_rank_00_04 {
+    0% {
+        transform: translate3d(1.8rem, 0, 0);
+    }
+    20% {
+        transform: translate3d(-1rem, 0, 0);
+    }
+    70% {
+        transform: translate3d(3.75rem, 0, 0);
+    }
+    100% {
+        transform: translate3d(1.8rem, 0, 0);
+    }
+}
+
+
+/*--风险一般--*/
+
+img.risk_rank_01_00 {
+    width: 1.55rem;
+    top: .565rem;
+    transform: translate3d(.535rem, 0, 0);
+    animation: 500s animate_risk_rank_01_00;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(.23, 0, 1, .8);
+}
+
+@keyframes animate_risk_rank_01_00 {
+    0% {
+        transform: translate3d(.535rem, 0, 0);
+    }
+    20% {
+        transform: translate3d(-1rem, 0, 0);
+    }
+    70% {
+        transform: translate3d(3.75rem, 0, 0);
+    }
+    100% {
+        transform: translate3d(.535rem, 0, 0);
+    }
+}
+
+img.risk_rank_01_01 {
+    width: .75rem;
+    top: .685rem;
+    transform: translate3d(2.6rem, 0, 0);
+    animation: 100s animate_risk_rank_01_01;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(.23, 0, 1, .8);
+}
+
+@keyframes animate_risk_rank_01_01 {
+    0% {
+        transform: translate3d(2.6rem, 0, 0);
+    }
+    20% {
+        transform: translate3d(-1rem, 0, 0);
+    }
+    70% {
+        transform: translate3d(3.75rem, 0, 0);
+    }
+    100% {
+        transform: translate3d(2.6rem, 0, 0);
+    }
+}
+
+
+/*--风险较高--*/
+
+img.risk_snow {
+    position: absolute;
+    width: .2rem;
+    transform: translate3d(0, -.5rem, 0);
+    animation: 10s animate_risk_snow;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+img.risk_snow_00 {
+    left: .3rem;
+    animation-delay: 4s;
+}
+
+img.risk_snow_01 {
+    left: 1.2rem;
+    animation-delay: 9.5s;
+}
+
+img.risk_snow_02 {
+    left: 2rem;
+    animation-delay: 6.8s;
+}
+
+img.risk_snow_03 {
+    left: 3rem;
+    animation-delay: 0s;
+}
+
+@keyframes animate_risk_snow {
+    0% {
+        transform: translate3d(0, -.5rem, 0);
+    }
+    100% {
+        transform: translate3d(0, 2.7rem, 0);
+    }
+}
+
+img.risk_rank_02_00 {
+    width: .6rem;
+    top: 1.8rem;
+    transform: translate3d(2.575rem, 0, 0) rotateY(0deg);
+    animation: 5s animate_risk_rank_02_00;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes animate_risk_rank_02_00 {
+    0% {
+        transform: translate3d(2.575rem, 0, 0) rotateY(0deg);
+    }
+    5% {
+        transform: translate3d(2.3rem, -.5rem, 0) rotateY(0deg);
+    }
+    10% {
+        transform: translate3d(2rem, 0, 0) rotateY(0deg);
+    }
+    20% {
+        transform: translate3d(1rem, -1rem, 0) rotateY(360deg);
+    }
+    30% {
+        transform: translate3d(.2rem, 0, 0) rotateY(360deg);
+    }
+    40% {
+        transform: translate3d(-1rem, 0, 0) rotateY(360deg);
+    }
+    70% {
+        transform: translate3d(3.75rem, 0, 0) rotateY(0deg);
+    }
+    100% {
+        transform: translate3d(2.575rem, 0, 0) rotateY(360deg);
+    }
+}
+
+
+/*--风险极高--*/
+
+img.risk_rank_03_00 {
+    position: relative;
+    width: .08rem;
+    top: -.1rem;
+    transform: translate3d(.2rem, 0, 0) scale(1);
+    animation-delay: 3s;
+    animation: 4.7s animate_risk_rank_03_01;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+img.risk_rank_03_01 {
+    position: relative;
+    width: .12rem;
+    top: -.15rem;
+    transform: translate3d(.2rem, 0, 0) scale(1);
+    animation: 3s animate_risk_rank_03_01;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes animate_risk_rank_03_01 {
+    0% {
+        transform: translate3d(.2rem, 0, 0) scale(1);
+    }
+    2% {
+        transform: translate3d(.2rem, 0, 0) scale(0);
+    }
+    4% {
+        transform: translate3d(.2rem, 0, 0) scale(1.5);
+    }
+    6% {
+        transform: translate3d(.2rem, 0, 0) scale(1);
+    }
+    8% {
+        transform: translate3d(.2rem, 0, 0) scale(0);
+    }
+    10% {
+        transform: translate3d(.2rem, 0, 0) scale(1.5);
+    }
+    10% {
+        transform: translate3d(.8rem, 0, 0) scale(1.5);
+    }
+    12% {
+        transform: translate3d(.8rem, 0, 0) scale(1);
+    }
+    14% {
+        transform: translate3d(.8rem, 0, 0) scale(0);
+    }
+    16% {
+        transform: translate3d(.8rem, 0, 0) scale(1.5);
+    }
+    18% {
+        transform: translate3d(.8rem, 0, 0) scale(1);
+    }
+    20% {
+        transform: translate3d(.8rem, 0, 0) scale(0);
+    }
+    22% {
+        transform: translate3d(.8rem, 0, 0) scale(1.5);
+    }
+    24% {
+        transform: translate3d(.8rem, 0, 0) scale(1);
+    }
+    26% {
+        transform: translate3d(.8rem, 0, 0) scale(0);
+    }
+    28% {
+        transform: translate3d(.8rem, 0, 0) scale(1.5);
+    }
+    30% {
+        transform: translate3d(.8rem, 0, 0) scale(1);
+    }
+    32% {
+        transform: translate3d(.8rem, 0, 0) scale(0);
+    }
+    34% {
+        transform: translate3d(.8rem, 0, 0) scale(1.5);
+    }
+    36% {
+        transform: translate3d(.8rem, 0, 0) scale(1);
+    }
+    37% {
+        transform: translate3d(.8rem, 0, 0) scale(1);
+    }
+    38% {
+        transform: translate3d(.8rem, 0, 0) scale(0);
+    }
+    100% {
+        transform: translate3d(.4rem, 0, 0) scale(0);
+    }
+}
+
+.risk-cloud-first {
+    position: absolute;
+    overflow: hidden;
+    top: .785rem;
+    transform: translate3d(.74rem, 0, 0);
+    animation: 300s animate_risk_rank_03_02;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(.23, 0, 1, .8);
+}
+
+img.risk_rank_03_02 {
+    position: relative;
+    width: 1.045rem;
+}
+
+@keyframes animate_risk_rank_03_02 {
+    0% {
+        transform: translate3d(.74rem, 0, 0);
+    }
+    20% {
+        transform: translate3d(-1rem, 0, 0);
+    }
+    70% {
+        transform: translate3d(3.75rem, 0, 0);
+    }
+    100% {
+        transform: translate3d(.74rem, 0, 0);
+    }
+}
+
+.risk-cloud-second {
+    position: absolute;
+    overflow: hidden;
+    top: .675rem;
+    transform: translate3d(1.5rem, 0, 0);
+    animation: 100s animate_risk_rank_03_03;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(.23, 0, 1, .8);
+}
+
+img.risk_rank_03_03 {
+    position: relative;
+    width: 1.255rem;
+}
+
+@keyframes animate_risk_rank_03_03 {
+    0% {
+        transform: translate3d(1.5rem, 0, 0);
+    }
+    20% {
+        transform: translate3d(-1rem, 0, 0);
+    }
+    70% {
+        transform: translate3d(3.75rem, 0, 0);
+    }
+    100% {
+        transform: translate3d(1.5rem, 0, 0);
+    }
+}
+
+div.risk-rain-frame {
+    position: absolute;
+    width: 100%;
+    height: 1.8rem;
+    top: 1.2rem;
+    overflow: hidden;
+}
+
+div.risk-rain {
+    position: absolute;
+    height: 1.8rem;
+    width: 100%;
+    transform: rotate(20deg) translate3d(0, -.5rem, 0);
+    animation: 3s animate_isk_rain_line;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(.23, 0, 1, .8);
+}
+
+div.risk-rain-01 {
+    animation-delay: 1s;
+}
+
+div.risk-rain-02 {
+    animation-delay: 2s;
+}
+
+@keyframes animate_isk_rain_line {
+    0% {
+        transform: rotate(20deg) translate3d(0, -.5rem, 0);
+    }
+    100% {
+        transform: rotate(20deg) translate3d(-.3rem, 1.8rem, 0);
+    }
+}
+
+div.risk-rain div {
+    position: absolute;
+    overflow: hidden;
+    width: 1px;
+    background: #4789f3;
+    opacity: .4;
+}
+
+div.risk-rain-line-00 {
+    height: .6rem;
+    top: .3rem;
+    left: .5rem;
+}
+
+div.risk-rain-line-01 {
+    height: .6rem;
+    top: .8rem;
+    left: .935rem;
+}
+
+div.risk-rain-line-02 {
+    height: .8rem;
+    top: 0;
+    left: 1.545rem;
+}
+
+div.risk-rain-line-03 {
+    height: .4rem;
+    top: .2rem;
+    left: 2.15rem;
+}
+
+div.risk-rain-line-04 {
+    height: .6rem;
+    top: .5rem;
+    left: 2.7rem;
+}
+
+div.risk-rain-line-05 {
+    height: .7rem;
+    top: 0;
+    left: 3.2rem;
+}
+
+div.risk-rain-line-06 {
+    height: .5rem;
+    top: .9rem;
+    left: 3.4rem;
+}
+
+.risk-robit {
+    position: absolute;
+    width: 1.2rem;
+    top: 2.06rem;
+    left: .78rem;
+}
+
+.summary-top {
+    padding: .12rem;
+    font-size: .18rem;
+    color: #FFFFFF;
+    line-height: .28rem;
+    font-weight: bold;
+}
+
+.summary-button {
+    float: right;
+    border: 1px solid #FFFFFF;
+    border-radius: .04rem;
+    margin-left: .08rem;
+    text-align: center;
+    height: .28rem;
+    font-size: .13rem;
+    color: #fff;
+    background-color: transparent;
+}
+
+.summary-dialog {
+    position: absolute;
+    left: .24rem;
+    bottom: .22rem;
+    width: calc(100% - .48rem);
+    background: #6ABBFF;
+    border-radius: .21rem;
+    padding: .1rem .12rem;
+    font-size: .15rem;
+    color: #FFFFFF;
+    line-height: .24rem;
+}
+
+.summary-dialog-arrows {
+    content: '';
+    position: absolute;
+    top: -.44rem;
+    left: .8rem;
+    border: .2rem solid transparent;
+    border-bottom: .3rem solid #6ABBFF;
+    border-right: 0;
+    transform: rotate(16deg);
+}
+
+.risk-evaluation-content {
+    padding: .2rem .08rem;
+    overflow: hidden;
+}
+
+.content-remark {
+    font-size: .12rem;
+    color: #999999;
+    line-height: .15rem;
+    padding-left: .16rem;
+}
+
+.content-title {
+    font-size: .2rem;
+    color: #3E4563;
+    line-height: .24rem;
+    margin: .04rem 0 .15rem 0;
+    padding-left: .16rem;
+    font-weight: bold;
+}
+
+.content-main {
+    background: #FFFFFF;
+    border-radius: .08rem;
+    padding: .16rem;
+    overflow: hidden;
+}
+
+.content-main-title img {
+    float: left;
+    width: .8rem;
+    height: .8rem;
+}
+
+.content-main-title .right {
+    position: relative;
+    float: left;
+    max-width: calc(100% - .8rem);
+    font-weight: bold;
+    line-height: .8rem;
+    padding: 0 .06rem;
+}
+
+.content-main-title .right .right-top-pre {
+    font-size: .2rem;
+    z-index: 9;
+}
+
+.second-title-pre {
+    color: #F4AF43;
+}
+
+.third-title-pre {
+    color: #FF5F5F;
+}
+
+.content-main-title .right .right-title {
+    font-size: .18rem;
+    color: #2B77EF;
+    z-index: 9;
+}
+
+.content-main-title .right .right-bar {
+    position: absolute;
+    top: .43rem;
+    left: 0;
+    z-index: 0;
+    display: inline-block;
+    width: 100%;
+    height: .12rem;
+    opacity: 0.37;
+    background: #C7DDFF;
+    border-radius: .21rem;
+}
+
+.your-age {
+    margin: .1rem 0 .16rem 0;
+    font-size: .14rem;
+    color: #3E4563;
+    line-height: .17rem;
+    font-weight: bold;
+}
+.age-disease-table {
+  width: 100%;
+  height: 2.2rem;
+}
+.age-disease-table .table {
+  width: 100%;
+  height: 100%; 
+}
+.age-disease-table .mark-line {
+  position: absolute;
+  top: 10%;
+  left: 16%;
+  content: '';
+  height: 68%;
+  border-right: 1px solid #979797;
+}
+
+.content-main-desc {
+    font-size: .14rem;
+    color: #636877;
+    line-height: .23rem;
+    margin: .2rem 0 .25rem 0;
+    letter-spacing: 0;
+    clear: both;
+}
+
+.other-service-title {
+    font-size: .2rem;
+    color: #FFFFFF;
+    line-height: .24rem;
+    margin: .2rem 0 .14rem .16rem;
+    font-weight: bold;
+}
+
+.other-service-block {
+    padding: .12rem;
+    background: #FFFFFF;
+    border-radius: .08rem;
+    margin-bottom: .1rem;
+}
+
+.other-service-block-title {
+    font-size: .16rem;
+    color: #3E4563;
+    line-height: .2rem;
+    font-weight: bold;
+}
+
+.other-service-block-content {
+    font-size: .14rem;
+    color: #999999;
+    margin-top: .06rem;
+    line-height: .2rem;
+}
+
+.AI-tip {
+    width: 100%;
+    /* height: 1.32rem; */
+    background-image: linear-gradient(135deg, #AECCFF 0%, #3167FF 100%);
+    border-radius: .08rem;
+    padding: .15rem .2rem;
+    margin-bottom: .1rem;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url(https://static.iberhk.com/v2/web/images/evaluate/share_bg.png);
+}
+
+.AI-tip-img {  
+    width: 1.06rem;
+    height: 1.06rem;
+    border-radius: 50%;
+}
+
+.AI-tip-right {
+  flex: 1;
+  text-align: left;
+  font-size: .18rem;
+  color: #FFFFFF;
+  letter-spacing: 0;
+  line-height: .28rem;
+}
+.AI-tip-right h3 {
+  font-size: .18rem;
+  color: #FFFFFF;
+  font-weight: 400;
+}

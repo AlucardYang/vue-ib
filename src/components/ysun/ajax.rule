@@ -1,0 +1,171 @@
+//失败
+{
+  code: 1,
+  msg: '业务逻辑异常',
+  data: {
+    
+  }
+}
+
+//成功
+{
+  code: 0,
+  msg: 'success',
+  data: {
+    
+  }
+}
+
+
+
+{
+  code: 0,
+  msg: 'success',
+  data: {
+    user_uuid: "77cf17777fe34f49a8f2bcfb8f549a26",
+    c_user_uuid: "5923d8f16428491f88a2a4714690a493",
+    order_id: "10a62514aa174c36b86f3c65491dcb4c",
+    mobile_pre: "86",
+    mobile: "12600981243"
+  }
+}
+
+
+this.$http.ajax({
+  path: "",
+  type: "get",
+  data: {},
+  intercept: (msg)=> {
+    if (plug.valueValid(msg)) {
+      //
+    }
+  },
+}).then((res)=> {
+  //业务模型
+});
+
+this.$http.ajax({
+  base: "",
+  timeout: 15000,
+  path: "",
+  type: "",
+  data: {},
+  filter: (res)=> {},
+  intercept: (res)=> {},
+  error: (err)=> {},
+  catch: false
+}).then((res)=> {
+  //业务模型
+}).catch((err)=> {
+  //
+});
+/*
+  *@base: [选填] 请求主域名
+  *@path: [必填] 请求路径
+  *@type: [必填] 请求类型
+  *@data: [选填] 请求数据
+  *@filter: [选填]] 处理异常返回逻辑
+  *@err: 
+  *@error: [选填] 处理错误返回逻辑
+  *@catch: [选填] 是否自动错误处理逻辑
+ **/
+const ajax = (args) => {
+  //language: this['language']['currentLang']
+  headers.language = window.lang;
+
+  //追加header头部信息
+  let headInfo = headers;
+
+  if (args.language != undefined) {
+    headers['language'] = args.language;
+  }
+  //优先获取args.data.language值
+  if (args.data.language != undefined) {
+    headers['language'] = args.data.language;
+  }
+
+  if (args.header != undefined) {
+    for (let key in args.header) {
+      headers[key] = args.header[key];
+    }
+    headInfo = headers;
+  }
+
+  let promise = new Promise((resolve, reject) => {
+    let json = {
+      method: args.type,
+      url: `${args.base ? args.base : ''}${args.path}`,
+      headers: headInfo,
+    };
+    let reg = /^[0-9]*$/g;
+    if (args.timeout != undefined && reg.test(args.timeout)) {
+      json.timeout = args.timeout;
+    }
+    if (args.type == "get") {
+      json.params = args.data || {};
+    }
+    if (args.type == "post") {
+      json.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+      json.data = require('qs').stringify(args.data);
+    }
+    axios(json).then((res) => {
+      //重定义业务逻辑
+      if (args.filter != undefined) {
+        args.filter(res);
+        return;
+      }
+      //重定向iBerPay未登录状态 
+      if (res.data.code == 1100 && args.authority != undefined) {
+        args.authority();
+        return;
+      }
+      if (res.data.code == 1900) {
+        if (args.dealwith != undefined) {
+          args.dealwith(res.data.msg);
+          return;
+        }
+      }
+      if (res.data.code != 0) {
+        if (args.intercept != undefined) {
+          args.intercept(res.data.msg);
+        }
+        if (args.toast) {
+          Toast({message: res.data.msg});
+        }
+        return;
+      }
+      resolve(res.data);
+    }).catch((err) => {
+      console.log(err);
+      if (args.err != undefined) {
+        args.err();
+        return;
+      }
+      if (err == undefined) {
+        Toast({message: window.simply ? "系统繁忙，请稍后再试" : "系統繁忙，請稍後再試"});
+        return;
+      }
+      let err_info = "";
+      err_info = window.simply ? "系统繁忙，请稍后再试" : "系統繁忙，請稍後再試";
+
+      if (args.error != undefined) {
+        args.error(err);
+        return;
+      }
+      if (args.catch != true) {
+        if (args.intercept != undefined) {
+          args.intercept();
+        }
+        if (args.toast == undefined || args.toast != false) {
+          Toast({message: err_info});
+        }
+        return;
+      }
+      reject(err);
+    });
+  });
+  promise.catch((error) => {
+    console.log(error);
+  });
+  return promise;
+};

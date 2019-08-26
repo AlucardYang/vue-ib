@@ -1,0 +1,333 @@
+<template>
+  <div class="com-frame" style="background-color:#f6f6f6;">
+    <div class="com-scroll-y aux-bar" v-load-scroll="loadMore">
+      <div v-if="showExchangeState" class="go-out-order-list" style="z-index:10000;" @click="goOutOrderList()">{{plug.sm(simply, '切换就診人手機號查看訂單>>')}}</div> 
+      <ul class="aux">
+        <li v-for="(dx,index) in orderList" :key="index" @click="goDetail(dx.care_order_uuid)">
+          <div class="com-disx title" :style="setBgSize(dx.care_order_uuid, dx.banner_url, index)">
+            <div v-loading vtiny class="banner" :src="dx.banner_url" :style="{'background-image': 'url(' + dx.banner_url + ')', 'background-size': dx.size}"></div> 
+            <div class="com-flexh info">
+              <p>
+                <i v-if="dx.pro" class="iconfonti">&#xe662;</i>
+                <span class="com-wrap" :style="{'text-indent': dx.pro ? '.22rem': '0'}">{{dx.title}}</span>
+              </p>
+            </div>
+            <em v-if="dx.status == 'topay'">{{plug.sm(simply, '待支付')}}<label style="font-size: .12rem;">({{changeInterval(dx.countdown)}})</label></em> 
+            <em v-if="dx.status == 'verifying'" style="color:#FF3B23;">{{plug.sm(simply, '待审核')}}</em>
+            <em v-if="dx.status == 'unconsumed'" style="color:#FF3B23;">{{plug.sm(simply, '待消费')}}</em>
+            <em v-if="dx.status == 'consumed'" style="color:#2a2a2a;">{{plug.sm(simply, '已消费')}}</em>
+            <em v-if="dx.status == 'refunding'" style="color:#2a2a2a;">{{plug.sm(simply, '退款中')}}</em>
+            <em v-if="dx.status == 'cancel'" style="color:#999;">{{plug.sm(simply, '已取消')}}</em>
+            <em v-if="dx.status == 'expire'" style="color:#999;">{{plug.sm(simply, '已过期')}}</em>
+            <em v-if="dx.status == 'refunded'" style="color:#999;">{{plug.sm(simply, '已退款')}}</em>
+          </div> 
+          <div class="content"> 
+            <p class="com-disx">{{plug.sm(simply, '就诊姓名')}}：<span>{{dx.user.name}}</span></p>
+            <p class="com-disx">{{plug.sm(simply, '预约时间')}}：<span>{{dx.user.time}}</span></p>
+            <p class="com-disx">{{plug.sm(simply, '预约门店')}}：<span>{{dx.user.address}}</span></p>
+          </div>
+          <div v-if="dx.status == 'topay'" class="com-disx pay">
+            <em><label v-if="simply">定金</label><label v-else>定金</label>：{{plug.price(inApp, simply)}} {{calcNum(dx.coin_fee)}}</em>
+            <button @click.stop="goPay(dx.care_order_uuid)" class="aux" type="button">去支付</button>
+          </div>
+        </li>
+      </ul>
+      <com-more-load v-if='more.state' style="background-color: #fff;"></com-more-load>
+      <div v-if='more.stop' style="padding-bottom:.48rem;line-height:.5rem;text-align:center;font-size:.12rem;color:#bbb;"><label v-if="simply">暂无更多订单</label><label v-else>暫無更多訂單</label></div>
+    </div>
+
+
+    <care-verify-mobile ref="careVerifyMobile" @updateConfirmMobile="updateConfirmMobile"></care-verify-mobile>
+  </div>
+</template>
+
+
+<script>
+  import CareVerifyMobile from "@/components/shared/component/popup/careverifymobile.vue";
+  import cmn from "@/components/ibercare/common.js";
+
+  import CommonJS from '@/components/shared/service/common.js';
+
+
+  export default {
+    name: 'iBerCareOrderList',
+    data() {
+      return {
+        query: {},
+        c_user_uuid: null,
+        orderList: [],
+        duration: [],
+        interval: {},
+
+        share: {},
+        showExchangeState: false,
+
+        more: { state: false, stop: false, page: 1, request: false}
+      }
+    },
+    components: {
+      CareVerifyMobile
+    },
+    mounted() {
+      this.$nextTick(() => {
+        this.$refs.careVerifyMobile.open();
+      });
+    },
+    created() { 
+      document.title = this.simply ? "我的报名预约列表" : "我的報名預約列表";
+      this.$root.pageLoading.layer = 1;
+      
+      let query = this.$route.query;
+      let links = this.urlParams;
+
+      this.query.user_uuid = (query && query.user_uuid) ? query.user_uuid : links.user_uuid;
+
+      if (!plug.objectValue(this.query)) {
+        this.$root.pageLoading.layer = 2;
+        return ;
+      } 
+
+      let interval = null;
+      let startInterval = () => {
+        window.clearInterval(interval);
+        let count = 0;
+        interval = window.setInterval(() => {
+          this.orderList.forEach((value, index) => {
+            if (value.status != 'topay' || value.countdown == 0) {
+              return;
+            }
+            this.orderList[index].countdown = parseInt(value.expire_time - value.now_time);
+            if (this.orderList[index].countdown <= 0) {
+              window.clearInterval(interval);
+              this.orderList[index].status = 'cancel';
+            }
+            this.orderList[index].countdown -= count;
+          });
+          count ++;
+        }, 1000);
+      };
+      startInterval();
+
+      cmn.toInterval(() => {
+        console.log("从后台切换到前台");
+        startInterval();
+      }, () => {
+        console.log("从前台切换到后台");
+      });
+    },
+    methods: {
+      goOutOrderList(){
+        // 清除验证码和手机号，退出登录
+        localStorage.setItem('care_verify_mobile', '');
+        localStorage.setItem('care_verify_mobile_pre', '');
+        localStorage.setItem('care_verify_code', '');
+        window.location.reload();
+      }, 
+      updateConfirmMobile(res) {
+        //授权成功回调函数
+        this.showExchangeState = true;
+        this.getRootUserInfo().then((auth) => {
+          this.c_user_uuid = auth.c_user_uuid;
+          this.getList();
+        });
+      },
+      changeInterval(time) {
+        let hour = Math.floor(time / 3600);
+        let minite = Math.floor((time % 3600) / 60);
+        let second = (time % 3600) % 60;
+        minite = minite > 9 ? minite : '0' + minite;
+        second = second > 9 ? second : '0' + second;
+
+        let input = hour + ':' + minite + ':' + second;
+        return input;
+      },
+      goDetail(care_order_uuid) {
+        //小程序
+        if (window.__wxjs_environment == "miniprogram" || window.platform == 7) {
+          cmn.miniPagePath({
+            object: this,
+            route: "/pages/frame/detail",
+            path: "/iber-care/order-detail",
+            title: plug.sm(this.simply, '订单详情'),
+            query: {
+              user_uuid: this.query.user_uuid,
+              care_order_uuid: care_order_uuid
+            }
+          });
+          return;
+        }
+        this.$router.push({
+          path: '/iber-care/order-detail',
+          query: {
+            user_uuid: this.query.user_uuid,
+            care_order_uuid: care_order_uuid
+          }
+        });
+      },
+      goPay(id) {
+        //小程序支付
+        if (window.__wxjs_environment == "miniprogram" || window.platform == 7) {
+          cmn.miniWxPay({
+            object: this,
+            user_uuid: this.query.user_uuid,
+            c_user_uuid: this.c_user_uuid,
+            care_order_uuid: id,
+            mobile_pre: this.query.mobile_pre,
+            mobile: this.query.mobile,
+            page_back: "page-order-list"
+          });
+          return;
+        }
+        window.location.href = window.baseUrl + "/iber-care/pay-select?user_uuid=" + this.query.user_uuid + "&care_order_uuid=" + id + "&mobile_pre=" + this.query.mobile_pre + "&mobile=" + this.query.mobile;
+      },
+      calcNum(value) { 
+        return cmn.changeFormat(value);
+      },
+      loadMore() {
+        this.duration = this.orderList;
+
+        if (this.more.request) {
+          return;
+        }
+        this.more.request = true;
+
+        if (this.more.stop) {
+          this.more.state = false;
+          return;
+        }
+        this.more.state = true;
+
+        this.$http.ajax({
+          path: "/iber-care/order-list",
+          type: "get",
+          data: { 
+            in_app: this.inApp ? 1 : 0,
+            page: this.more.page,
+            user_uuid: this.query.user_uuid,
+            c_user_uuid: this.c_user_uuid,
+            mobile: localStorage.getItem('care_verify_mobile'),
+            mobile_pre: localStorage.getItem('care_verify_mobile_pre'),
+            code: localStorage.getItem('care_verify_code'),
+          },
+          toast: true,
+          intercept: (msg) => {
+            this.more.request = false;
+            this.more.state = false;
+          }
+        }).then((res)=> {
+          //业务模型
+          this.more.request = false;
+
+          res.data.list.forEach((value, index) => {
+            res.data.list[index].index = this.duration.length + index;
+
+            res.data.list[index].size = "";
+            res.data.list[index].ref = "bgautosize" + index;
+
+            this.orderList.push(res.data.list[index]);
+          });
+
+          if (res.data.list.length < 20) { 
+            this.more.state = false;
+            this.more.stop = true;
+            return;
+          } 
+          this.more.page += 1;
+
+        });
+      },
+      setBgSize(refId, imgUrl, index) {
+        let ref = refId;
+        ref = new Image();
+        ref.src = imgUrl;
+        ref.onload = () => {
+          if (ref.width > ref.height) {
+            this.orderList[index].size = "auto 100%";
+            return ;   
+          } 
+          this.orderList[index].size = "100% auto";  
+        }
+      },
+      getList() {
+        this.$http.ajax({
+          path: "/iber-care/order-list",
+          type: "get",  
+          data: { 
+            page: this.more.page,
+            user_uuid: this.query.user_uuid,
+            c_user_uuid: this.c_user_uuid,
+            mobile: localStorage.getItem('care_verify_mobile'),
+            mobile_pre: localStorage.getItem('care_verify_mobile_pre'),
+            code: localStorage.getItem('care_verify_code'),
+          },
+          intercept: (msg) => {
+            if (plug.valueValid(msg)) {
+              this.$root.pageLoading.info = msg;
+            }
+            this.$root.pageLoading.layer = 2;
+          }
+        }).then((res) => {
+          //业务模型 
+          if (res.data.list.length == 0) {
+            this.$root.pageLoading.src = "https://static.iberhk.com/v2/common/order_null.png";
+            this.$root.pageLoading.info = plug.sm(simply, '您当前不存在任何订单'); 
+            this.$root.pageLoading.button = false;
+            this.$root.pageLoading.layer = 2; 
+            //不存在订单的页面顶部出现‘切换就诊人手机号查看订单’入口
+            this.showExchangeState = true;
+            return ;
+          } 
+          res.data.list.forEach((value, index) => {
+            res.data.list[index].size = "";
+            res.data.list[index].index = index;
+
+            this.orderList.push(res.data.list[index]);
+          });
+
+          this.$root.pageLoading.layer = 0;
+
+          // 设置分享信息
+          this.share.title = res.data.share.title;
+          this.share.thumbImage = res.data.share.thumbImage; 
+          this.share.desc = res.data.share.desc;
+          this.share.url = window.location.origin + window.location.pathname + '?user_uuid=' + this.query.user_uuid;
+          // 微信分享初始化
+          CommonJS.initWX(this.share);
+
+          this.more.page += 1;
+        });
+      }
+    }
+  }
+</script>
+
+<style scoped>
+  ul>li {margin-bottom:.1rem;padding:.16rem;padding-bottom:0;background-color:#fbfbfb;}
+  ul>li:active {background-color:#f8f8f8;}
+  ul>li>div.title {overflow:hidden;}
+  ul>li>div.title>div.banner {margin-right:.08rem;width:.6rem;height:.45rem;background-repeat: no-repeat;}
+  ul>li>div.title>div.info {flex:1;line-height:.225rem;font-size: .14rem;color:#2a2a2a;}
+  ul>li>div.title>div.info p {overflow: hidden;}
+  ul>li>div.title>div.info i {position: absolute;top:0;margin-right:.05rem;font-size: .1rem;color:#FF9613;}
+  ul>li>div.title>div.info span {display: block;}
+  ul>li>div.title>em {width:1rem;line-height:.45rem;text-align:right;font-size: .14rem;color:#FF3B23;}
+  ul>li>div.content {padding-top:.12rem;padding-bottom:.12rem;line-height:.2rem;font-size: .13rem;}
+  ul>li>div.content p>label {width:.7rem;}
+  ul>li>div.content p>span {flex: 1;}
+  ul>li>div.pay {height:.6rem;line-height:.6rem;border-top:1px solid #e8e8e8;}
+  ul>li>div.pay em {flex:1;font-size: .15rem;color:#ff3b23;}
+  ul>li>div.pay button {top:.16rem;width:.64rem;height:.28rem;border-radius: .32rem;background-image: linear-gradient(90deg, #FE6519 0%, #FF912A 100%);color:#fff;font-size:.13rem; padding: 0;}
+  ul>li>div.pay button:active {opacity: .7;} 
+
+  .go-out-order-list {
+    width: 100%;
+    height: .32rem;
+    line-height: .32rem;
+    background-color: rgba(51,100,228,0.10);
+    font-size: .13rem;
+    color: #3364E4;
+    text-align: center;
+    line-height: .32rem;
+    cursor: pointer;
+}
+</style>

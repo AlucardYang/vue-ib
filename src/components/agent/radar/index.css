@@ -1,0 +1,408 @@
+.iber-radar {
+  background-image: url(https://static.iberhk.com/v2/web/images/agent/radar/bg.png);
+  padding: .12rem;
+  padding-top: .25rem;
+}
+.radar-frame {
+  background-image: url(https://static.iberhk.com/v2/web/images/agent/radar/card.png);
+}
+.close {
+  position: absolute;
+  top: .11rem;
+  right: .11rem;
+  width: .2rem;
+  height: .2rem;
+  z-index: 1000;
+}
+.close:active {
+  opacity: .6;
+}
+
+
+header {
+  width: 100%;
+  height: 1.8rem;
+  padding-top: .9rem;
+  padding-bottom: .4rem;
+}
+header div.robit {position: absolute;top: .2rem;left: 0;width: 100%;height: .525rem;}
+header div.robit img.robit {height: 100%;}
+
+header div.robit img.lit {height: 100%;opacity: 0;animation: litAnimate 1500ms infinite;}
+header div.robit img.big {height: 100%;opacity: 0;animation: bigAnimate 1500ms infinite;}
+@keyframes litAnimate {0% {opacity: 0;} 30% {opacity: 1;} 70% {opacity: 1;} 100% {opacity: 0;}}
+@keyframes bigAnimate {0% {opacity: 0;} 10% {opacity: 0;} 70% {opacity: 1;} 100% {opacity: 0;}} 
+
+header h3 {
+  padding: 0 .3rem;
+  font-size: .2rem;
+  color: #fff;
+  text-align: center;
+}
+header div.separate {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+}
+header div.separate img.underlines {
+  display: block;
+  width: 100%;
+  height: .04rem;
+}
+header div.separate div.slide {
+  width: 100%;
+  height: .26rem;
+  line-height: .26rem;
+  background-color: rgba(0, 0, 0, .2);
+  color: rgba(255, 255, 255, .5);
+}
+header div.separate div.slide em {
+  width: .3rem;
+  text-align: center;
+}
+header div.separate div.slide div {
+  flex: 1;
+  height: .26rem;
+  overflow: hidden;
+}
+header div.separate div.slide ul>li.alt {
+  height: .26rem;
+  line-height: .26rem;
+  font-size: .12rem;
+}
+
+
+section {
+  width: 100%;
+  flex: 1;
+  padding: .28rem .32rem;
+  padding-bottom: 0;
+}
+section>div {
+  overflow: hidden;
+}
+
+/*--单选输入框--*/
+div.radar-input-frame {
+  height: .5rem;
+  line-height: .5rem;
+  border-radius: .04rem;
+  overflow: hidden;
+  background: #fff;
+}
+div.radar-input-frame>em {
+  width: .4rem;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .04);
+  text-align: center;
+  font-size: .17rem;
+  color: #2a2a2a;
+  overflow: hidden;
+}
+div.radar-input-frame>input {
+  flex: 1;
+  padding-left: .12rem;
+  font-size: .14rem;
+  color: #2a2a2a;
+}
+div.radar-input-frame>div.filter {
+  flex: 1;
+  padding-left: .12rem;
+  font-size: .14rem;
+  color: #2a2a2a; 
+}
+div.radar-input-frame.aux-active:active {
+  background-color: #007CFF;
+}
+div.radar-input-frame.aux-active:active em {
+  color: #fff;
+}
+div.radar-input-frame.aux-active:active input {
+  color: #fff; 
+}
+div.radar-input-frame.single-input {
+  margin-bottom: .1rem;
+}
+
+
+
+
+/*--多选-公共布局框--*/
+div.replenish {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: .28rem .32rem;
+  padding-bottom: 0;
+}
+div.replenish>div {
+  width:100%;
+  flex: 1;
+  padding-bottom: .1rem;
+}
+div.replenish>button {
+  width:100%;
+  height: .5rem;
+  border-radius: .04rem;
+  background-color: #007CFF;
+  font-size: .15rem;
+  color: #fff;
+}
+
+/*--多选输入框--*/
+div.select-more {
+  height: .5rem;
+  line-height: .5rem;
+  border-radius: .04rem;
+  overflow: hidden;
+  background: #fff;
+}
+div.select-more.active {
+  background-color: #007CFF;
+}
+div.select-more.active input {
+  color: #fff; 
+}
+div.select-more:active input {
+  color: #fff; 
+}
+div.select-more>div {
+  width: .4rem;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .04);
+  text-align: center;
+  font-size: .17rem;
+  color: #2a2a2a;
+  overflow: hidden;
+}
+div.select-more>input {
+  flex: 1;
+  padding-left: .15rem;
+  font-size: .14rem;
+  color: #2a2a2a;
+}
+div.select-more>span {
+  flex: 1;
+  padding-left: .15rem;
+  font-size: .14rem;
+  color: #2a2a2a;
+}
+
+
+/*--单行--*/
+ul.single-row>li {
+  margin-bottom: .1rem;
+}
+
+
+/*--多排--*/
+ul.double-row>li {
+  width: 50%;
+  float:left;
+  margin-bottom: .1rem;
+}
+ul.double-row>li:nth-child(odd) {
+  padding-right: .05rem;
+}
+ul.double-row>li:nth-child(even) {
+  padding-left: .05rem;
+}
+
+
+/*--模板--*/
+div.temp-relative {
+  margin-bottom: .1rem;
+}
+div.temp-relative:active {
+  background-color: #007CFF;
+}
+div.temp-relative:active em {
+  color: #fff;
+}
+div.temp-relative:active input {
+  color: #fff; 
+}
+div.temp-relative>span {
+  flex: 1;
+  padding-left: .15rem;
+  font-size: .15rem;
+  color: #2a2a2a;
+}
+div.temp-relative:active span {
+  color: #fff; 
+}
+
+
+/*--添加用户--*/
+div.add-user>input {
+  font-size:.15rem;
+}
+div.add-user>em {
+  width:.54rem;
+  background-color:#eee;
+  font-size:.15rem;
+  color:#ccc;
+}
+
+
+/*--文本--*/
+div.iber-text>em {
+  width:.54rem;
+  background-color:#eee;
+  font-size:.15rem;
+  color:#ccc; 
+}
+
+
+
+
+/*--HK＄--*/
+div.income>div {
+  border-right: 1px solid #ddd;
+  width: .5625rem;
+  text-align: center;
+  font-size: .15rem;
+}
+div.income>span {
+  position: absolute;
+  left: .7125rem;  
+  z-index: 2;
+  font-size: .15rem;
+  background: #fff;
+}
+div.income>em {
+  width:.54rem;
+  background-color:#eee;
+  font-size:.15rem;
+  color:#ccc;
+}
+
+
+/*--生日--*/
+div.birthday>em {
+  width:.54rem;
+  background-color:#eee;
+  font-size:.15rem;
+  color:#ccc;
+}
+
+
+/*--地址--*/
+div.address>em {
+  width:.54rem;
+  background-color:#eee;
+  font-size:.15rem;
+  color:#ccc;
+}
+div.iber-addr {
+  background: #fff;
+}
+div.iber-addr h3 {
+  height: .5rem;
+  line-height: .5rem;
+  text-align: center;
+  font-size: .17rem;
+}
+div.iber-addr div.toolbar {
+  height: .3rem;
+  line-height: .3rem;
+  border-bottom: 1px solid #ddd;
+  overflow: hidden;
+}
+div.iber-addr div.toolbar p {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  overflow: hidden;
+}
+div.iber-addr div.toolbar span {
+  position: absolute;
+  top: 0;
+  display: inline-block;
+}
+div.iber-addr div.toolbar em {
+  margin-right: .15rem; 
+  margin-left: .15rem;
+}
+div.iber-addr div.toolbar em.active:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #3364E4;
+} 
+div.iber-addr ul {
+  height: 2.2rem;
+}
+div.iber-addr ul>li {
+  height: .4rem;
+  line-height: .4rem;
+  font-size: .14rem;
+}
+div.iber-addr ul>li:active {
+  color: #3364E4; 
+}
+
+
+/*--区号--*/
+div.area-code>div {
+  border-right: 1px solid #ddd;
+}
+div.area-code>div span {
+  width:.465rem;
+  text-align: right;
+  font-size: .15rem;
+}
+div.area-code>div i {
+  font-size: .12rem;
+  transform: scale(.4);
+  color: #666;
+}
+div.area-code>em {
+  width:.54rem;
+  background-color:#eee;
+  font-size:.15rem;
+  color:#ccc;
+}
+
+p.go-filter {
+  height: .2rem;
+  line-height: .2rem;
+  color: #fff;
+  text-align: right;
+  opacity: .5;
+}
+
+
+
+footer {
+  width: 100%;
+  text-align: center;
+  padding: .12rem .32rem .2rem .32rem;
+}
+footer button {
+  width: 100%;
+  height: .5rem;
+  font-size: .15rem;
+  color: #A3B6FF;
+  background-image: url(https://static.iberhk.com/v2/web/images/agent/radar/button.png);
+}
+footer p {
+  height: .4rem;
+  line-height: .4rem;
+  color: #B1E7FF;
+  font-size: .13rem;
+}
+footer p i {
+  display: inline-block;
+  font-size: .12rem;
+  transform: scale(.8);
+}

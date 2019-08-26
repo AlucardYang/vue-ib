@@ -1,0 +1,91 @@
+div.iber-card {
+  background-color: #fff;
+  border-radius: .08rem;
+  box-shadow: 0 0 .04rem .04rem rgba(126,126,126,0.04);
+  overflow: hidden;
+}
+div.iber-card>div {
+  padding: .12rem;
+  padding-bottom: 0;
+}
+div.iber-card div.info {
+  flex: 1;
+  overflow: hidden;
+}
+div.iber-card div.info>div>img {
+  display: block;
+  width: .48rem;
+  height: .48rem;
+  border-radius: 100%;
+}
+div.iber-card div.info>div>div {
+  flex: 1;
+  overflow: hidden;
+  padding-left: .12rem;
+}  
+div.iber-card div.info>div>div h3 {
+  height: .26rem;
+  line-height: .26rem;
+  font-size: .17rem;
+}
+div.iber-card div.info>div>div p {
+  line-height: .2rem;
+  font-size: .12rem;
+  color: #999;
+}
+div.iber-card div.action {
+  padding-top: .12rem;
+  width: .8rem;
+  text-align: right;
+}
+div.iber-card div.action button {
+  padding: 0 .05rem;
+  border-radius: .04rem;
+  font-size: .12rem;
+}
+div.iber-card div.action button.follow {
+  border: 1px solid #FF7417;
+  color: #FF7417;
+}
+div.iber-card div.action button.folowed {
+  border: 1px solid #aaa;
+  color: #aaa;
+}
+div.iber-card div.action button i {
+  display: inline-block;
+  transform: scale(.8);
+  font-size: .12rem;
+}
+div.iber-card>p.show {
+  padding-right:.1rem;
+  padding-left: .12rem;
+  height: .45rem;
+  line-height: .45rem;
+}
+div.iber-card>p.show span {
+  flex: 1;
+  font-size: .13rem;
+  color: #999;
+}
+div.iber-card>p.show em {
+  font-size: .13rem;
+  color: #3364E4;
+}
+div.iber-card>p.show em i {
+  display: inline-block;
+  transform: scale(.7);
+  font-size: .12rem;
+}
+div.iber-card>p.note {
+  border-top: 1px solid #ddd;
+  height: .4rem;
+  line-height: .4rem;
+  text-align: center;
+  font-size: .145rem;
+  color: #3364E4;
+}
+div.iber-card>p.note i {
+  top: 1px;
+  margin-right: .05rem;
+  line-height: .145rem;
+}

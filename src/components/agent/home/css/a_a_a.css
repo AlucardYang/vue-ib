@@ -1,0 +1,398 @@
+.iber-agent-aaa {
+  background-image: url(https://static.iberhk.com/v2/web/images/agent/a_a_a_bg.png);
+}
+div.bg>div {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/*
+ *@点赞
+ **/ 
+.thumbs-up { 
+  position: absolute;
+  top: .15rem;
+  left: .15rem;
+  overflow: hidden;
+  color: #fff;
+  z-index: 9;
+} 
+.thumbs-up>i {
+  font-size: .2rem;
+}
+
+dl.theme {
+  height: 100%;
+  padding-bottom: .7rem;
+  border-radius: .08rem;
+  background: #fff;
+}
+dl.theme>dt {
+  width: 100%;
+}
+dl.theme>dt.cm {
+  padding: .2rem; 
+}
+dl.theme>dt h3 {
+  font-size: .2rem;
+  height: .22rem;
+  line-height: .22rem;
+}
+dl.theme>dt p.cm {
+  font-size: .12rem;
+  color: #999;
+  height: .24rem;
+  line-height: .24rem;
+}
+dl.theme>dd {
+  width: 100%;
+  flex: 1;
+}
+
+
+/*--个人资料--*/
+dl.info>dt {
+  overflow: hidden;
+  padding-top: .45rem;
+  background-image: url(https://static.iberhk.com/v2/web/images/agent/a_a_a_info_bg.png);
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+dl.info>dt>i {
+  position: absolute;
+  top: .15rem;
+  right: .15rem;
+}
+dl.info>dt div {
+  width: .95rem;
+  height: .95rem;
+  border-radius: 100%;
+  border: 2px solid #fff;
+}
+dl.info>dt div img.avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  background: #eee;
+  display: block;
+}
+dl.info>dt div img.auth {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: .2rem;
+  color: #f00;
+}
+dl.info>dt h3 {
+  margin-top:.15rem;
+  height: .2rem;
+  line-height: .2rem;
+  font-size: .16rem;
+  color: #fff;
+  text-align: center;
+}
+dl.info>dt p { 
+  height: .2rem;
+  line-height: .2rem;
+  color: #ccc;
+  font-size: .12rem;
+  text-align: center;
+}
+dl.info>dd ul>li {
+  padding-top: .1rem;
+  padding-bottom: .1rem;
+}
+dl.info>dd ul>li:nth-child(odd) {
+  background: #f6f6f6;
+}
+dl.info>dd ul>li em {
+  width: .5rem;
+  min-width: .5rem;
+  overflow: hidden;
+}
+dl.info>dd ul>li em i {
+  color: #aaa; 
+  font-size: .3rem;
+}
+dl.info>dd ul>li div {
+  padding-right: .05rem;
+}
+dl.info>dd ul>li div h5 {
+  text-align: left;
+  width: 100%;
+  font-size: .13rem;
+}
+dl.info>dd ul>li div p {
+  font-size: .13rem;
+}
+
+
+/*--个性签名--*/
+dl.autograph>dt {
+  height: 1.6rem;
+  background-image: url(https://static.iberhk.com/v2/web/images/agent/a_a_a_autograph_bg.png);
+}
+dl.autograph>dd {
+  font-size: .15rem;
+  color: #666;
+}
+dl.autograph>dd>div {
+  padding: .6rem .25rem;
+  overflow: hidden;
+}
+dl.autograph>dd i {
+  position: absolute;
+  font-size: .18rem;
+  line-height: .18rem;
+  color: #ddd;
+}
+dl.autograph>dd i.left {
+  top: .25rem;
+  left: .25rem;
+}
+dl.autograph>dd i.right{
+  right: .25rem;
+  bottom: .25rem;
+}
+dl.autograph>dd>div div {
+  line-height: .2rem;
+}
+
+
+/*--个人简介--*/
+dl.profile>dt {
+  height: 1.6rem;
+  background-image: url(https://static.iberhk.com/v2/web/images/agent//a_a_a_profile_bg.png);
+}
+dl.profile>dd {
+  text-align: center;
+  font-size: .15rem;
+  color: #666;
+}
+dl.profile>dd>div {
+  padding: .6rem .25rem;
+  overflow: hidden;
+}
+dl.profile>dd i {
+  position: absolute;
+  font-size: .18rem;
+  line-height: .18rem;
+  color: #ddd;
+}
+dl.profile>dd i.left {
+  top: .25rem;
+  left: .25rem;
+}
+dl.profile>dd i.right{
+  right: .25rem;
+  bottom: .25rem;
+}
+dl.profile>dd>div div {
+  line-height: .2rem;
+}
+
+
+/*--从业经验--*/
+dl.experience>dt {
+  height: .9rem;
+  background-image: url(https://static.iberhk.com/v2/web/images/agent/a_a_a_experience_bg.png);
+}
+dl.experience>dd {
+  padding: .1rem .25rem;
+  padding-right: 0;
+}
+dl.experience>dd ul {
+  border-left: 1px solid #ddd;
+  padding-left: .2rem;
+}
+dl.experience>dd ul:before {
+  content: "";
+  position: absolute;
+  left: -.06rem;
+  width: .1rem;
+  height: .3rem;
+  background: #fff;
+}
+dl.experience>dd ul>li {
+  border-top: 1px solid #eee;
+  padding: .14rem 0;
+  padding-right: .2rem;
+}
+dl.experience>dd ul>li:first-child {
+  border-top: 0;
+}
+dl.experience>dd ul>li:before {
+  content: "";
+  position: absolute;
+  top: .225rem;
+  left: -.255rem;
+  width: .1rem;
+  height: .1rem;
+  background: #ccc;
+  border-radius: 100%;
+}
+dl.experience>dd h3 {
+  font-size: .15rem;
+}
+dl.experience>dd p {
+  line-height: .2rem;
+  font-size: .12rem;
+  color: #999;
+  margin-bottom: .15rem;
+}
+dl.experience>dd div.content {
+  clear: both;
+  color: #999;
+  line-height: .2rem;
+  font-size: .13rem;
+}
+
+
+/*--个人荣誉--*/
+dl.honor>dt {
+  height: .9rem;
+  background-image: url(https://static.iberhk.com/v2/web/images/agent/a_a_a_honor_bg.png);
+}
+dl.honor>dd {
+  padding: .1rem .25rem;
+  padding-right: 0;
+}
+dl.honor>dd ul:before {
+  z-index: 9;
+  content: "";
+  position: absolute;
+  left: .39rem;
+  width: .1rem;
+  height: .3rem;
+  background: #fff;
+}
+dl.honor>dd ul:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: .42rem;
+  width: 1px;
+  height: 100%;
+  background: #ddd;
+}
+dl.honor>dd ul>li {
+  padding: .15rem 0;
+  padding-right: .2rem;
+}
+dl.honor>dd ul>li:before {
+  z-index: 9;
+  content: "";
+  position: absolute;
+  top: .24rem;
+  left: .378rem;
+  width: .1rem; 
+  height: .1rem;
+  background: #ccc;
+  border-radius: 100%;
+}
+dl.honor>dd ul>li>span {
+  width: .55rem;
+  font-size: .12rem;
+  color: #999;
+  line-height: .3rem;
+}
+dl.honor>dd ul>li>div {
+  flex: 1;
+}
+dl.honor>dd ul>li>div h3 {
+  color: #333;
+  font-size: .15rem;
+}
+dl.honor>dd ul>li>div div {
+  color: #999;
+  line-height: .2rem;
+}
+
+
+/*--个人相簿--*/
+dl.album>dt {
+  height: .9rem;
+  background-image: url(https://static.iberhk.com/v2/web/images/agent/a_a_a_album_bg.png);
+}
+dl.album>dd {
+  padding: .1rem .275rem;
+}
+dl.album>dd>div {
+  padding-top: .15rem;
+  padding-bottom: .15rem;
+  border-top: 1px solid #ddd;
+}
+dl.album>dd>div:first-child {
+  border-top: 0;
+}
+dl.album>dd>div>p {
+  line-height: .22rem;
+  margin-bottom: .1rem; 
+  padding-right: .025rem;
+  padding-left: .025rem;
+  color: #333;
+}
+dl.album>dd>div img {
+  width: 100%;
+  height: 1005;
+}
+dl.album>dd>div>span {
+  display: block;
+  margin-top: .05rem;
+  height: .2rem;
+  line-height: .2rem;
+  font-size: .12rem;
+  color: #979797;
+}
+
+
+
+div.shadow {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: .75rem;
+  padding-top: .05rem; 
+  overflow: hidden;
+}
+div.shadow>div {
+  height: 100%;
+  box-shadow: 0 0 10px #eee; 
+}
+footer {
+  position: absolute;
+  bottom: .15rem;
+  left: 50%;
+  margin-left: -1.55rem;
+  width: 3.1rem;
+  height: .4rem;
+  line-height: .4rem;
+  border-radius: .25rem;
+  background: #2a2a2a;
+  overflow: hidden;
+  color:#fff;
+  font-size: .15rem;
+  text-align: center;
+}
+footer>i {
+  margin-right: .05rem;
+}
+footer label {
+  font-weight: 600;
+}
+
+
+div.remark {
+  padding: .12rem .1rem;
+  text-align: center;
+  line-height: .2rem;
+  font-size: .12rem;
+  color:#eee;
+  overflow: hidden;
+}
+div.remark label {
+  display: block;
+  transform: scale(.9);
+}

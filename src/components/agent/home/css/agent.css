@@ -1,0 +1,211 @@
+/*--左右手势--*/
+.agent-gesture-left {z-index:9;position: absolute;transform: translateX(3.2rem);bottom: 1.7rem;width: .3rem;animation: animate-gesiture-left 2s infinite linear;}
+@keyframes animate-gesiture-left {0% {transform: translateX(3.2rem);} 50% {transform: translateX(3.4rem);} 100% {transform: translateX(3.2rem);}} 
+
+.title-format {line-height: .2rem;}
+
+/*@分隔线*/
+ em.line {margin-right: .1rem;margin-left: .1rem; font-weight: 100;font-size: .18rem;transform: scale(.7);}
+
+/*@相册*/
+.agent-album-handle {height: .1rem;}
+.agent-album-handle img {z-index: 9;position: absolute;top: .06rem;width: .48rem;height: .48rem;}
+.agent-album-handle img.left {left: 0;}
+.agent-album-handle img.right {right: 0;}
+
+/*@相册布局*/
+div.iber-album-frame {overflow: hidden;width: 100%;}
+ul>li.iber-album-container {float: left;}
+.iber-album-container {width: 33.3333333%;height: 0;padding-bottom: 33.3333333%;}
+.iber-album-container>div {position: absolute;top: 0;left: 0;width: 100%;height: 100%;padding: .025rem;}
+
+/*独立相册*/
+.iber-album-show {width: 100%;height: 100%;overflow: hidden;}
+.iber-album-bg {width: 100%;height: 100%;background-repeat: no-repeat;background-position: center center;background-size: 100% auto;}
+
+/*@上滑指示*/
+div.iber-gesture-animate {position: absolute;top: -.7rem;left: 50%;margin-left: -.07rem;width: .14rem;height: .25rem;overflow: hidden;}
+div.iber-gesture-animate i {position: absolute; transform: translateY(0);left: 0;font-size: .14rem;animation: animate-pull-up 2s infinite linear reverse;}
+@keyframes animate-pull-up {
+  0% {transform: translateY(0);} 
+  25% {transform: translateY(-.05rem);} 
+  50% {transform: translateY(0);} 
+  75% {transform: translateY(-.05rem);} 
+  100% {transform: translateY(0);}
+}
+
+/*@职业认证和MDRT认证*/
+em.iber-agent-mdrt {margin-top: .05rem;height: 16px;line-height: 16px;border-radius: 16px;overflow: hidden;text-align: center;}
+em.iber-agent-mdrt i {display: block;font-size: 12px;transform: scale(.75);}
+
+/*@底部声明*/
+ div.iber-agent-declare {overflow: hidden;padding: .18rem;line-height: .2rem;font-size: .12rem;text-align: center;}
+
+
+
+ 
+
+/*@-----a_a_a.vue-----*/
+.iber-agent-aaa .page .mint-swipe-item {padding: .15rem;padding-bottom: 0;}
+
+/*@-----a_a_i.vue-----*/
+ .iber-agent-aai .mint-navbar {
+  width: 100%;
+  height: .44rem;
+  line-height: .44rem;
+  border-radius: .44rem;
+  background-color: #211539;
+  border-bottom: 1px solid rgba(216, 216, 216, 0.1);
+}
+.iber-agent-aai .mint-navbar * {
+  padding: 0 !important;
+  margin: 0 !important; 
+  border: 0 !important;
+}
+.iber-agent-aai .mint-navbar .mint-tab-item-label {
+  line-height: .44rem !important;
+  color: #fff;
+  font-size: .14rem;
+  border-radius: .44rem;
+}
+.iber-agent-aai .mint-navbar .is-selected .mint-tab-item-label {
+  color: #fff;
+  font-weight: 600;
+  background-color: #853DC5; 
+}
+
+
+/*@-----a_a_h.vue-----*/
+.iber-agent-aah .slide  .mint-swipe-item {
+  padding: .3rem .2rem .2rem .2rem;
+}
+.iber-agent-aah .slide-info { 
+  background-image: url(https://static.iberhk.com/v2/web/images/agent/a_a_h_bg_info.png);
+}
+.iber-agent-aah .slide-autograph {
+  background-image: url(https://static.iberhk.com/v2/web/images/agent/a_a_h_bg_autograph.png);
+}
+.iber-agent-aah .slide-profile {
+  background-image: url(https://static.iberhk.com/v2/web/images/agent/a_a_h_bg_profile.png);
+}
+.iber-agent-aah .slide-experience {
+  background-image: url(https://static.iberhk.com/v2/web/images/agent/a_a_h_bg_experience.png);
+}
+.iber-agent-aah .slide-honor {
+  background-image: url(https://static.iberhk.com/v2/web/images/agent/a_a_h_bg_honor.png);
+}
+.iber-agent-aah .slide-album {
+  background-image: url(https://static.iberhk.com/v2/web/images/agent/a_a_h_bg_album.png);
+}
+
+
+/*@-----a_a_g.vue-----*/
+ .iber-agent-aag .mint-navbar {
+  width: 100%;
+  height: .44rem;
+  line-height: .44rem;
+  background: #d73e1f;
+}
+.iber-agent-aag .mint-navbar * {
+  padding: 0 !important;
+  margin: 0 !important; 
+  border: 0 !important;
+}
+.iber-agent-aag .mint-navbar .mint-tab-item-label {
+  line-height: .44rem !important;
+  color: #FDF791;
+  font-size: .15rem;
+}
+.iber-agent-aag .mint-navbar .is-selected .mint-tab-item-label {
+  color: #FFFB9B;
+  font-weight: 600;
+}
+.iber-agent-aag .mint-navbar .is-selected .mint-tab-item-label:before {
+  content: "";
+  position: absolute;
+  bottom: .05rem;
+  width: .3rem;
+  height: 2px;
+  background: #FFFB9B;
+}
+
+
+/*@-----a_a_e.vue-----*/
+.iber-agent-aae .mint-navbar {
+  width: 100%; 
+  height: .44rem;
+  line-height: .44rem;
+  background-color: #fff5e6;
+}
+.iber-agent-aae .mint-navbar * {
+  padding: 0 !important;
+  margin: 0 !important; 
+  border: 0 !important;
+}
+.iber-agent-aae .mint-navbar .mint-tab-item-label {
+  line-height: .44rem !important;
+  color: #ba6d35;
+  font-size: .15rem;
+}
+.iber-agent-aae .mint-navbar .is-selected .mint-tab-item-label {
+  color: #964f1c;
+  font-weight: 600;
+}
+.iber-agent-aae .mint-navbar .is-selected .mint-tab-item-label:before {
+  content: "";
+  position: absolute;
+  bottom: .05rem;
+  width: .3rem;
+  height: 2px;
+  background-color: #964f1c;
+}
+.iber-agent-aae .mint-tab-container {
+  width: 100%;
+  background-color: rgba(255, 252, 246, 0.92);
+}
+
+
+/*@-----a_a_g.vue-----*/
+.iber-agent-aag .mint-tab-container {
+  width: 100%;
+}
+
+
+/*@-----a_a_i.vue-----*/
+.iber-agent-aai .mint-tab-container {
+  width: 100%;
+}
+
+
+/*@-----a_a_l.vue-----*/
+.iber-agent-aal .mint-navbar {
+  width: 100%; 
+  height: .44rem;
+  line-height: .44rem;
+}
+.iber-agent-aal .mint-navbar * {
+  padding: 0 !important;
+  margin: 0 !important; 
+  border: 0 !important;
+}
+.iber-agent-aal .mint-navbar .mint-tab-item-label {
+  line-height: .44rem !important;
+  color: #999;
+  font-size: .14rem;
+}
+.iber-agent-aal .mint-navbar .is-selected .mint-tab-item-label {
+  color: #f08049;
+  font-weight: 600;
+}
+.iber-agent-aal .mint-navbar .is-selected .mint-tab-item-label:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: .3rem;
+  height: 2px;
+  background-color: #ff7842;
+}
+.iber-agent-aal .mint-tab-container {
+  width: 100%;
+  background-color: #fff;
+}

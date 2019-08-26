@@ -1,0 +1,95 @@
+##注释  @优化文件结构
+
+##拉取代码  @从master拉取最新代码到dev分支
+##推送代码  @将dev2分支最新代码推送到master
+##优化代码  @增强可读性
+##修改代码  @优化体验
+##新增文件  @
+##新增需求  @
+##新增功能  @ 
+
+{{plug.sm(simply, '')}}
+plug.sm(this.simply, '')
+
+//GIT操作
+git merge origin/develop
+git merge origin/dev2
+git merge origin/dev2_task
+git merge origin/master 
+git merge origin/dev_stage_task 
+
+========================================================
+dev2             测试分支     
+dev2_item        阶段任务
+dev2_work        开发任务
+dev2_master      优化master主支
+dev2_bug         修改BUG
+
+========================================================
+
+CDN静态资源: https://static.iberhk.com/v2/web/images/
+
+
+/*
+ *@路由层级
+ *@router/index.js
+ **/
+-1   -    调试页面
+0    -    APP内嵌页面、APP分享页面、无链接页面 
+1    -    
+2    -    
+3    -    
+4    -    
+5    -    
+6    -    
+
+99   -   最后页，无逻辑，例如空白页，错误页等
+
+
+
+
+
+
+
+/*
+ *@==================================================================
+ *@
+ *@【分享推薦語】包含24個模塊
+ *@ greet_type: ''
+ *@==================================================================
+ **/
+----------------------------------------------------------------------------------------------- 
+  字段                                        名称                  对应路由
+----------------------------------------------------------------------------------------------- 
+  monthly_investment_calculator         |    月供投资计算器           @/components/calculator/ 
+  education_fund_calculator             |    教育基金计算器           @/components/calculator/
+  multi_millionaire_calculator          |    千万富翁计算器           @/components/calculator/
+  future_calculator                     |    未来值计算器             @/components/calculator/
+  pension_fund_calculator               |    退休基金计算器           @/components/calculator/
+  premium_fees_calculator               |    保费征费计算器           @/components/calculator/
+  mainland_tax_calculator               |    内地个税计算器           @/components/calculator/
+  life_safeguard_calculator             |    人寿保障计算器           @/components/calculator/
+  compound_interest_calculator          |    复利计算器              @/components/calculator/
+
+  exchange_rate_query                   |    汇率查询                @/components/exchangerate/
+
+  greeting_card                         |    贺卡-视频贺卡           @/components/card/
+  posters                               |    海报                   @/~APP
+
+  insurance_products                    |    保险产品                @/暂无
+  information                           |    资讯                   @/components/article/detail/detail.vue
+  miniprogram                           |    小程序                 @/暂无
+
+  personal_home_page                    |    个人主页                @/components/agent/home/
+
+  product_comparison                    |    产品对比                @/components/product/compare.vue
+  serious_illness                       |    重疾                   @/components/illness/detail.vue
+  media_reports                         |    媒体报导                @/components/media/detail.vue
+  
+  intelligent_risk_evaluation           |    智能风险评测             @/~APP
+  intelligent_disease_evaluation        |    智能疾病评测             @/~APP
+  the_article                           |    写文章、转载文章         @components/agent-article/detail
+
+  iBerCare_medical_company              |    iBerCare医疗公司        @/~APP
+  iBerCare_medical_products             |    iBerCare医疗产品        ~/frontend/web/static/view/iberCare/appGoodsDetail.js
+----------------------------------------------------------------------------------------------- 

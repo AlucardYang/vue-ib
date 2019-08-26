@@ -1,0 +1,351 @@
+dl.theme {
+  margin-bottom: .16rem;
+  border-radius: .16rem;
+  background-color: #fff;
+}
+dl.theme:not(.info) {
+  padding: .16rem;
+}
+dl.theme:not(.info)>dt {
+  margin-bottom: .16rem;
+}
+dl.theme>dt.title {
+  margin-bottom: .16rem;
+  line-height: .22rem;
+  font-weight: bold;
+  font-size: .18rem;
+}
+
+/*--个人资料--*/
+dl.info>dt {
+  padding-bottom: 100%;
+  width: 100%;
+  height: 0;
+}
+dl.info>dt img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+dl.info>dt>div.mdrt {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: .24rem;
+  width: .38rem;
+  height: .44rem;
+}
+dl.info>dt div.icon {
+  padding-top: .09rem;
+  width: .38rem;
+  height: .44rem;
+  color: #fff;
+}
+dl.info>dt div.icon em {
+  position: absolute;
+  left: .1rem;
+  width: 100%;
+  height: 0;
+  transform: rotate(-30deg) translateY(-.5rem);
+  background-color: rgba(250, 250, 250, 0);
+  box-shadow: 0 0 .08rem .01rem #fff;
+  animation: emFilter 3s infinite linear;
+}
+@keyframes emFilter {
+  0% {transform: rotate(-30deg) translateY(-.5rem);}
+  100% {transform: rotate(-30deg) translateY(0);}
+}
+dl.info>dd {
+  padding: .16rem;
+  height: 1.38rem;
+}
+dl.info>dd h3 {
+  height: .27rem;
+  line-height: .27rem;
+  font-size: .22rem;
+}
+dl.info>dd p {
+  height: .2rem;
+  line-height: .2rem;
+}
+dl.info>dd p.position {
+  font-size: .13rem;
+}
+dl.info>dd p.company {
+  margin-top: .18rem;
+  padding-right: 1.1rem;
+  font-size: .12rem;
+}
+dl.info>dd h5 {
+  margin-top: .01rem;
+  height: .2rem;
+  line-height: .2rem;
+  font-weight: lighter;
+  font-size: .12rem;
+  color: #0e89d6;
+}
+dl.info>dd h5 i {
+  top: 1px;
+  margin-right: .05rem;
+}
+/*点赞*/
+div.out-approval {
+  z-index: 999;
+  position: absolute;
+  right: .74rem;
+  bottom: .2rem;
+  width: .44rem;
+  height: .44rem;
+  line-height: .44rem;
+  border-radius: 100%;
+  box-shadow: 0 .06rem .15rem rgba(0, 0, 0, .2);
+  background-image: linear-gradient(-135deg, #808A97 0%, #535D6B 100%);
+  text-align: center;
+}
+div.out-approval i {
+  font-size: .18rem;
+  color: #fff;
+}
+
+/*咨询顾问*/
+div.relative-consult {
+  z-index: 999;
+  position: absolute;
+  right: .16rem;
+  bottom: .2rem;
+  width: .44rem;
+  height: .44rem;
+  line-height: .44rem;
+  border-radius: .44rem;
+  background-image: linear-gradient(-135deg, #30AAF7 0%, #0E89D6 100%);
+  box-shadow: 0 .06rem .15rem rgba(7, 126, 173, .4);
+  text-align: center;
+  font-size: .14rem;
+}
+div.relative-consult i {
+  top: .01rem;
+  font-size: .18rem;
+}
+
+/*咨询顾问*/
+div.out-consult {
+  z-index: 999;
+  position: absolute;
+  right: .16rem;
+  bottom: .2rem;
+  width: .44rem;
+  height: .44rem;
+  line-height: .44rem;
+  border-radius: .44rem;
+  background-image: linear-gradient(-135deg, #30AAF7 0%, #0E89D6 100%);
+  box-shadow: 0 .06rem .15rem rgba(7, 126, 173, .4);
+  text-align: center;
+  font-size: .14rem;
+}
+div.out-consult i {
+  top: .01rem;
+  font-size: .18rem;
+}
+
+/*--联系方式--*/
+dl.contact>dd>p {
+  margin-bottom: .1rem;
+  padding: .15rem .17rem;
+  line-height: .18rem;
+  border-radius: .04rem;
+  background-color: #f6f6f6;
+}
+dl.contact>dd>p span:first-child {
+  width: .35rem;
+}
+dl.contact>dd>p i {
+  font-size: .18rem;
+  color: #0e89d6;
+}
+dl.contact>dd>p span:last-child {
+  flex: 1;
+}
+dl.contact>dd>div {
+  padding-bottom: .1rem;
+}
+dl.contact>dd>div>img {
+  width: .95rem;
+  height: .95rem;
+}
+dl.contact>dd>div ul {
+  flex: 1;
+  padding-left: .18rem;
+}
+dl.contact>dd>div ul>li.qr-code {
+  height: .16rem;
+  line-height: .16rem;
+  font-size: .12rem;
+  color: #999;
+}
+dl.contact>dd>div ul>li.id {
+  margin-top: .1rem;
+  margin-bottom: .09rem;
+  line-height: .14rem;
+  font-size: .14rem;
+}
+dl.contact>dd>div ul>li.id i {
+  top: 2px;
+  margin-right: .05rem;
+  font-size: .2rem;
+  color: #07c160;
+}
+dl.contact>dd>div ul>li button {
+  width: 1.745rem;
+  height: .42rem;
+  border-radius: .42rem;
+  background-color: #07c160;
+  box-shadow: 0 .04rem .12rem rgba(26, 173, 25, .3);
+  font-size: .14rem;
+  color: #fff;
+}
+
+
+/*--个性签名--*/
+dl.autograph>dd {
+  padding: .27rem .35rem;
+  line-height: .2rem;
+}
+dl.autograph>dd div {
+  font-size: .15rem;
+}
+dl.autograph>dd i {
+  position: absolute;
+  font-size: .12rem;
+  line-height: .12rem;
+  color: #ddd;
+}
+dl.autograph>dd i:first-child {
+  top: 0;
+  left: 0;
+}
+dl.autograph>dd i:last-child {
+  right: 0;
+  bottom: 0;
+}
+
+
+/*--个人简介--*/
+dl.profile>dd {
+  line-height: .24rem;
+  font-size: .15rem;
+}
+
+
+/*--从业经验--*/
+dl.experience>dd ul {
+  padding-top: .1rem;
+}
+dl.experience>dd ul>li {
+  padding-bottom: .3rem;
+  border-left: .02rem dashed #dadada;
+}
+dl.experience>dd ul>li:last-child {
+  padding-bottom: 0;
+}
+dl.experience>dd ul>li:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -.05rem;
+  width: .08rem;
+  height: .08rem;
+  border-radius: 100%;
+  background-color: #0fa1d6;
+}
+dl.experience>dd ul>li {
+  padding-left: .15rem;
+}
+dl.experience>dd ul>li>p {
+  top: -.03rem;
+  margin-bottom: .1rem;
+  line-height: .17rem;
+  font-size: .14rem;
+}
+dl.experience>dd ul>li>div {
+  padding: .17rem;
+  border-radius: .06rem;
+  border-left: .03rem solid #0fa1d6;
+  background-color: #f6f6f6;
+}
+dl.experience>dd ul>li>div h3 {
+  line-height: .21rem;
+  font-size: .17rem;
+}
+dl.experience>dd ul>li>div p {
+  margin-top: .05rem;
+  line-height: .17rem;
+  font-size: .14rem;
+}
+dl.experience>dd ul>li>div div {
+  margin-top: .2rem;
+  font-size: .14rem;
+  color: #444;
+}
+
+
+/*--个人荣誉--*/
+dl.honor>dd>div {
+  margin-top: .1rem;
+  padding: .16rem 0;
+  border-radius: .06rem;
+  background-color: #f6f6f6;
+}
+dl.honor>dd>div:first-child {
+  margin-top: 0;
+}
+dl.honor>dd>div>span {
+  width: .68rem;
+  border-right: 1px solid #ccc;
+  font-weight: bold;
+  font-size: .16rem;
+  color: #0fa1d6;
+}
+dl.honor>dd>div>div {
+  flex: 1;
+  padding-right: .16rem;
+  padding-left: .16rem;
+}
+dl.honor>dd>div>div h3 {
+  line-height: .21rem;
+  font-size: .17rem;
+}
+dl.honor>dd>div>div p {
+  margin-top: .2rem;
+  line-height: .19rem;
+  font-size: .14rem;
+  color: #6f6f6f;
+}
+
+
+/*--个人相簿--*/
+dl.album {
+  margin-bottom: 0;
+}
+dl.album>dd p.desc {
+  margin-bottom: .16rem;
+  line-height: .19rem;
+  font-size: .14rem;
+  color: #666;
+}
+dl.album>dd span.time {
+  margin-top: .06rem;
+  line-height: .15rem;
+  font-size: .14rem;
+  color: #979797;
+}
+dl.album>dd>div {
+  padding-top: .2rem;
+  padding-bottom: .2rem;
+  border-top: 1px solid #eee;
+}
+dl.album>dd>div:first-child {
+  padding-top: 0;
+  border-top: 0;
+}

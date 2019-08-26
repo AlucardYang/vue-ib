@@ -1,0 +1,565 @@
+div.bg {
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  background-image: url(https://static.iberhk.com/v2/web/images/agent/a_a_g_bg.png);
+}
+div.bg img.lantern {
+  position: absolute;
+  top: .12rem;
+  width: .82rem;
+  height: 1.16rem;
+}
+div.bg img.lantern.left {
+  left: .24rem;
+}
+div.bg img.lantern.right {
+  right: .24rem;
+}
+div.bg img.new_year {
+  position: absolute;
+  top: .3rem;
+  left: 50%;
+  margin-left: -1.4425rem;
+  width: 2.885rem;
+  height: .755rem;
+}
+@media screen and (min-height: 400px) {
+  div.bg img.new_year {
+    top: .7rem;
+  }
+}
+@media screen and (min-height: 470px) {
+  div.bg img.new_year {
+    top: 1.15rem;
+  }
+}
+
+div.bg div.circle {
+  width: 100%;
+  height: 100%;
+  background-image: url(https://static.iberhk.com/v2/web/images/agent/a_a_g_bg_radius.png);
+}
+div.bg div.circle div.avatar {
+  width: 1.7rem;
+  height: 1.7rem;
+  padding: .21rem;
+  border-radius: 100%;
+  background-image: url(https://static.iberhk.com/v2/web/images/agent/a_a_g_radio.png);
+}
+div.bg div.circle div.avatar img.avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+}
+div.bg div.circle>img {
+  position: absolute;
+}
+div.bg div.circle>img.cloud-up {
+  top: 1.385rem;
+  right: 0;
+  width: .91rem;
+  height: .175rem;
+}
+div.bg div.circle>img.cloud-left {
+  top: 1.8rem;
+  left: .235rem;
+  width: .82rem;
+  height: .15rem;
+}
+div.bg div.circle>img.cloud-down {
+  right: 0;
+  bottom: .83rem;
+  width: .685rem;
+  height: .335rem;
+}
+div.bg div.circle>img.firework-left {
+  bottom: 1.225rem;
+  left: 0;
+  width: .82rem;
+  height: .82rem;
+}
+div.bg div.circle>img.firework-right {
+  right: .2rem;
+  bottom: 1.585rem;
+  width: .64rem;
+  height: .915rem;
+}
+div.bg div.circle>img.flower-left {
+  bottom: 2.1rem;
+  left: .655rem;
+  width: .475rem;
+  height: .615rem;
+}
+div.bg div.circle>img.flower-right {
+  top: 1.815rem;
+  right: .725rem;
+  width: .475rem;
+  height: .475rem;
+}
+
+
+div.bg div.circle div.address {
+  position: absolute;
+  bottom: -.1rem;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+@media screen and (min-height: 450px) {
+  div.bg div.circle div.address {
+    bottom: .2rem;
+  }
+}
+div.bg div.circle div.address h3.info {
+  font-size: .17rem;
+  color: #fff;
+}
+div.bg div.circle div.address p.info {
+  height: .2rem;
+  line-height: .2rem;
+  font-size: .12rem;
+  color: #fffbeb;
+}
+div.bg div.circle div.address h3.address {
+  font-size: .12rem;
+  color: #eee;
+  font-weight: 200;
+}
+div.bg div.circle div.address p.address {
+  font-size: .12rem;
+  color: #eee;
+  line-height: 0.18rem;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  overflow: hidden;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+
+p.iber-gesture-animate {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: .32rem;
+  text-align: center;
+}
+@media screen and (min-height: 450px) {
+  p.iber-gesture-animate {
+    bottom: .15rem;
+  }
+}
+p.iber-gesture-animate i {
+  position: absolute;
+  margin-left: -.07rem;
+  font-size: .14rem;
+  color: #fff;
+  transform: translateY(0);
+  animation: animate-pull-up 2s infinite linear;
+}
+@keyframes animate-pull-up {
+  0% {transform: translateY(0);} 
+  25% {transform: translateY(-.05rem);} 
+  50% {transform: translateY(0);} 
+  75% {transform: translateY(-.05rem);} 
+  100% {transform: translateY(0);}
+}
+
+
+.iber-container {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+div.container { 
+  flex: 1;
+  width: 100%;
+  overflow: hidden;
+  background-image: url(https://static.iberhk.com/v2/web/images/agent/a_a_g_bg.png);
+}
+div.container div.nav {
+  width: 100%;
+  height: .44rem;
+}
+div.container div.main {
+  flex: 1;
+  overflow: hidden;
+  width: 100%;
+}
+
+.mint-tab-container-item {
+  background-image: url(https://static.iberhk.com/v2/web/images/agent/a_a_g_cloud_bg.png);
+  background-size: 100% auto;
+  background-repeat: repeat;  
+}
+
+
+dl.title {
+  width: 100%;
+  height: 1.2rem;
+}
+dl.title>dt {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1.2rem;
+  background-image: url(https://static.iberhk.com/v2/web/images/agent/a_a_g_bg.png);
+}
+dl.title>dd>p {
+  height: .32rem;
+  text-align: center;
+}
+dl.title>dd>p i {
+  position: absolute;
+  top: 0;
+  margin-left: -.07rem;
+  opacity: .8;
+  font-size: .14rem;
+  color: #fff;
+  animation: iAninmateUp 2s infinite linear;
+}
+dl.title>dd>div {
+  height: .64rem;
+}
+dl.title>dd>div div.avatar-farme {
+  width: .64rem;
+  height: .64rem;
+}
+dl.title>dd>div div.avatar-farme img.avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  background: #eee;
+  display: block;
+}
+dl.title>dd>div div.avatar-farme img.auth {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: .2rem;
+  color: #f00;
+}
+dl.title>dd>div div.info {
+  flex: 1;
+  padding-right: .2rem;
+  padding-left: .15rem;
+  padding-top: .07rem;
+  overflow: hidden;
+}
+dl.title>dd>div div.info h3 {
+  height: .22rem;
+  line-height: .22rem;
+  font-size: .18rem;
+  color: #fff993;
+}
+dl.title>dd>div div.info p {
+  font-size: .13rem;
+  color: #fff993;
+  opacity: .8;
+}
+dl.title>dd>div button {
+  padding: 0;
+  width: .52rem;
+  height: .24rem;
+  line-height: .24rem;
+  border-radius: .24rem;
+  text-align: center;
+  font-size: .14rem;
+  color: #ff4011;
+  outline: 0;
+  border: 0;
+  background: #ffe04a;
+}
+
+
+
+dl.theme {
+  padding-bottom: .25rem;
+}
+dl.theme>dt {
+  height: .6rem;
+  padding: .15rem .2rem;
+}
+dl.theme>dt h3 {
+  height: .3rem;
+  line-height: .3rem;
+  font-size: .2rem;
+  color: #F73E1F;
+}
+dl.theme>dt h3 * {
+  float: left;
+}
+dl.theme>dt h3 img {
+  width: .28rem;
+  height: .28rem;
+  margin-right: .06rem;
+}
+
+/*--个人资料--*/
+dl.contact ~ dl.profile {
+  border-top: .12rem solid #f73e1f;
+}
+dl.contact>dd {
+  padding: 0 .2rem;
+}
+dl.contact>dd ul>li {
+  margin-top: .15rem;
+}
+dl.contact>dd ul>li:first-child {
+  margin-top: 0;
+}
+dl.contact>dd ul>li div {
+  width: .24rem;
+}
+dl.contact>dd ul>li em.icon {
+  display: inline-block;
+  width: .24rem;
+  height: .24rem;
+  line-height: .24rem;
+  text-align: center;
+  border-radius: 100%;
+  background: #FFE2D3; 
+}
+dl.contact>dd ul>li em.icon i {
+  font-size: .2rem;
+  color:#F73E1F;
+}
+dl.contact>dd ul>li p {
+  flex: 1;
+  padding-top: .02rem;
+  padding-bottom: .02rem;
+  line-height: .2rem;
+  padding-left: .12rem;
+  font-size: .13rem;
+}
+
+
+/*--个性签名--*/
+div.autograph {
+  margin-top: .2rem;
+  padding: .45rem 0;
+}
+div.autograph i {
+  position: absolute;
+  font-size: .18rem;
+  line-height: .18rem;
+  color: #F73E1F;
+  opacity: .5;
+}
+div.autograph i.left {
+  top: .15rem;
+  left: 0;
+}
+div.autograph i.right{
+  right: 0;
+  bottom: .15rem;
+}
+div.autograph div {
+  line-height: .22rem;
+  font-size: .15rem;
+}
+
+
+/*--个人简介--*/
+dl.profile>dd {
+  padding: 0 .175rem;
+  line-height: .2rem;
+  font-size: .15rem;
+}
+
+
+/*--从业经验--*/
+dl.experience>dd {
+  padding: 0 .25rem;
+}
+dl.experience>dd div.line {
+  width: .25rem;
+}
+dl.experience>dd div.line p {
+  height: 100%;
+  width: 1px;
+  background: #F73E1F;
+}
+dl.experience>dd div.line p:before {
+  content: "";
+  position: absolute;
+  top: .2rem;
+  left: -.045rem;
+  width: .1rem;
+  height: .1rem;
+  background: #F73E1F;
+  border-radius: 100%;
+}
+dl.experience>dd ul>li:first-child div.line {
+  padding-top: .09rem;
+}
+dl.experience>dd ul>li:first-child div.line p:before {
+  top: 0;
+}
+dl.experience>dd div.content {
+  flex: 1;
+  padding-top: .1rem;
+  padding-bottom: .1rem;
+  border-top: 1px solid #ddd;
+}
+dl.experience>dd ul>li:first-child div.content {
+  padding-top: 0;
+  border-top: 0;
+}
+
+
+dl.experience>dd h3 {
+  font-size: .15rem;
+  color:#420606;
+}
+dl.experience>dd div.content p {
+  line-height: .2rem;
+  font-size: .13rem;
+  color: #753030;
+  margin-bottom: .1rem;
+  overflow: hidden;
+}
+dl.experience>dd div.content div {
+  clear: both;
+  color: #753030;
+  line-height: .2rem;
+  font-size: .13rem;
+}
+
+.agent-declare {
+  padding: .15rem;
+  height: .7rem;
+  line-height: .2rem;
+  font-size: .13rem;
+  color: rgba(255, 252, 202, .7);
+  text-align: center;
+}
+
+
+/*--个人荣誉--*/
+dl.experience ~ dl.honor {
+  border-top: .12rem solid #f73e1f;
+}
+dl.honor>dd {
+  padding: 0 .25rem;
+}
+dl.honor>dd div.line {
+  width: .25rem;
+}
+dl.honor>dd div.line p {
+  height: 100%;
+  width: 1px;
+  background: #F73E1F;
+}
+dl.honor>dd div.line p:before {
+  content: "";
+  position: absolute;
+  top: .2rem;
+  left: -.045rem;
+  width: .1rem;
+  height: .1rem;
+  background: #F73E1F;
+  border-radius: 100%;
+}
+dl.honor>dd ul>li:first-child div.line {
+  padding-top: .1rem;
+}
+dl.honor>dd ul>li:first-child div.line p:before {
+  top: 0;
+}
+dl.honor>dd div.content {
+  flex: 1;
+  padding-top: .1rem;
+  padding-bottom: .1rem;
+}
+dl.honor>dd ul>li:first-child div.content {
+  padding-top: 0;
+}
+
+
+dl.honor>dd div.content h3 {
+  color: #420606;
+  font-size: .15rem;
+}
+dl.honor>dd div.content h3 span {
+  font-size: .13rem;
+  color: #F73E1F;
+  margin-right: .12rem;
+  font-weight: 400;
+  color: #bc7847;
+}
+dl.honor>dd div.content div {
+  overflow: hidden;
+}
+dl.honor>dd div.content div p {
+  line-height: .22rem;
+  font-size: .13rem;
+  color: #753030;
+}
+
+
+
+/*--个人相簿--*/
+dl.album>dd>div {
+  padding: .1rem .2rem;
+  border-radius: .08rem;
+}
+dl.album>dd>div:first-child {
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+dl.album>dd>div>p {
+  line-height: .22rem;
+  padding-right: .025rem;
+  padding-left: .025rem;
+  font-size: .14rem;
+  color: #420606;
+}
+dl.album>dd>div>span {
+  display: block;
+  margin-bottom: .05rem;
+  height: .3rem;
+  line-height: .3rem;
+  font-size: .13rem;
+  color: #753030;
+}
+dl.album>dd>div>div.avatar {
+  overflow: hidden;
+}
+dl.album>dd>div>div.avatar ul>li {
+  float: left;
+}
+
+/*-----1张-----*/
+dl.album>dd>div>div.avatar .one {
+  width: 2.18rem;
+  height: 2.18rem;
+  margin: .04rem 0; 
+}
+
+/*-----2张、3张、5张、大于等于6张-----*/
+dl.album>dd>div>div.avatar .three {
+  width: 3.21rem; 
+  left: -.025rem;
+}
+dl.album>dd>div>div.avatar .three li {
+  width: 1.02rem;
+  height: 1.02rem; 
+  margin: .025rem;
+}
+
+/*-----4张-----*/
+dl.album>dd>div>div.avatar .four {
+  width: 2.14rem;
+  height: 2.14rem;
+}
+dl.album>dd>div>div.avatar .four li {
+  width: 1.02rem;
+  height: 1.02rem; 
+  margin: .025rem;
+}

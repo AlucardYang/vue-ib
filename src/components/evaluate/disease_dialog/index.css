@@ -1,0 +1,48 @@
+ul, ul>li {overflow: hidden;}
+ul {padding-bottom: .2rem;}
+dl.select-picker {overflow: hidden;background:#fff;}
+dl.select-picker>dt {height:.45rem;line-height:.45rem;padding-left:.3rem;font-size:.15rem;color:#666;border-bottom: 1px solid #f2f4f5;font-weight: 600;}
+dl.select-picker>dt em {color:#3653ec;margin-right: .3rem;}
+dl.select-picker>dd {overflow: hidden;padding-left:.3rem;}
+dl.select-picker>dd div {width:3.5rem;max-height:3.22rem;}
+dl.select-picker>dd p {height: .46rem;line-height: .46rem;font-size:.15rem;color:#666;}
+dl.select-picker>dd p.active {color:#3653ec;}
+dl.select-picker>dd p:active {color:#3653ec;}
+dl.dialog {overflow:hidden;display:flex;margin-top:.12rem;margin-bottom: .18rem;}
+dl.dialog>dt {overflow:hidden;width: .4rem;height:.4rem;border-radius: 100%;}
+dl.dialog>dt img {width: 100%;height:100%;border-radius: 100%;}  
+dl.dialog>dt i {font-size: .4rem;line-height: .4rem;color:#ddd;}
+dl.agent>dt {margin-right:.12rem;margin-left:.12rem;}  
+dl.customer>dt {margin-right:.12rem;margin-left:.12rem;}
+dl.dialog>dd {flex: 1;}
+dl.dialog>dd>div {max-width:100%;height:100%;display: inline-block;border-radius: .08rem;padding:.08rem .1rem;line-height:.24rem;} 
+dl.dialog>dd>div>span {line-height:.25rem;font-size: .15rem;}
+dl.agent>dd {padding-right: .64rem;}
+dl.agent>dd>div {float:left;background:#fff;color:#666;}
+dl.customer>dd {padding-left: .64rem;}
+dl.customer>dd>div {float:right;background:#4b93ff;color:#fff;}
+dl.agent>dd::after {position: absolute;top: .15rem;left: -.15rem;content:"";width:0;height:0;border: .08rem solid transparent;border-top-width: .05rem;border-bottom-width: .05rem;border-right-color: #fff;}
+dl.customer>dd::after {position: absolute;top: .15rem;right: -.15rem;content:"";width:0;height:0;border: .08rem solid transparent;border-top-width: .05rem;border-bottom-width: .05rem;border-left-color: #4b93ff;}
+dl.agent>dd.result::after {opacity: 0;}
+
+dl.agent>dd.result>div {display: block;width:100%;padding:0;}
+dl.agent>dd.result>div div {overflow: hidden;padding: .05rem .1rem .1rem .1rem;background-size: 100% 100%;background-repeat: no-repeat;border-top-right-radius: .08rem; 
+border-top-left-radius: .08rem;}
+dl.agent>dd.result>div div.result-bg {background-image: url(https://static.iberhk.com/v2/web/images/evaluate/evaluate_result.png);}
+dl.agent>dd.result>div div h3 {line-height:.3rem;text-align: center;color:#fff;font-size: .16rem;}
+dl.agent>dd.result>div div p {font-size: .13rem;color:#fff;}
+dl.agent>dd.result>div>p {height: .4rem;line-height: .4rem;text-align: center;color: #4b93ff;}
+dl.agent>dd.result>div>p button {float:left;width: 50%;height:100%;font-size: .14rem;}
+
+.items {margin-top:.1rem;width:3.44rem;margin-right:auto;margin-left:auto;}
+.select-items em {font-size: .15rem;color:#3364E4;height:.4rem;line-height:.4rem;background:#fff;padding-right:.24rem;padding-left:.24rem;margin-right:.12rem;border-radius: .4rem;margin-bottom:.1rem;box-shadow: 0 1px 2px 1px #eee;-webkit-box-shadow: 0 1px 2px 1px #eee;}
+.select-items em:last-child {margin-right: 0;} 
+.select-items em:active {background: #eee;} 
+
+.select-checkbox {background:#fff;border-radius: .16rem;overflow:hidden;}
+.select-checkbox div {padding: .2rem;padding-bottom:0;overflow:hidden;} 
+.select-checkbox div span {margin-right: .15rem;margin-bottom:.15rem;display: inline-block;color:#666;}
+.select-checkbox div span em {margin-right:.1rem;}  
+.select-checkbox button[type='button'] {border:0;outline:0;width:100%;height:.45rem;background:#fff;font-size:.15rem;color:#3364E4;border-top: 1px solid #ddd;border-bottom-right-radius:.16rem;border-bottom-left-radius:.16rem;}
+
+.reelect {position: absolute;top:0;left:-.4rem;height:.4rem;line-height:.4rem;display: block;color:#3364E4;font-size: .12rem;width:.4rem;text-align: center;}

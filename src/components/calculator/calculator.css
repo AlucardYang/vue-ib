@@ -1,0 +1,358 @@
+input::-webkit-input-placeholder {
+    color: #b3b3b3;
+    font-size: 0.18rem;
+    font-weight: normal;
+    padding-right: 0.02rem;
+    padding-top: 0.01rem;
+    font-family: PingFangSC-Light, Roboto, HelveticaNeue, Helvetica, Arial, sans-serif;
+}
+
+input:-moz-placeholder {
+    color: #b3b3b3;
+    font-size: 0.18rem;
+    font-weight: normal;
+    padding-right: 0.02rem;
+    padding-top: 0.01rem;
+    font-family: PingFangSC-Light, Roboto, HelveticaNeue, Helvetica, Arial, sans-serif;
+}
+
+input::-moz-placeholder {
+    color: #b3b3b3;
+    font-size: 0.18rem;
+    font-weight: normal;
+    padding-right: 0.02rem;
+    padding-top: 0.01rem;
+    font-family: PingFangSC-Light, Roboto, HelveticaNeue, Helvetica, Arial, sans-serif;
+}
+
+input:-ms-input-placeholder {
+    color: #b3b3b3;
+    font-size: 0.18rem;
+    font-weight: normal;
+    padding-right: 0.02rem;
+    padding-top: 0.01rem;
+    font-family: PingFangSC-Light, Roboto, HelveticaNeue, Helvetica, Arial, sans-serif;
+}
+
+input::-webkit-inner-spin-button {
+    margin-top: .065rem;
+    display: none;
+}
+
+.display-none {
+    display: none;
+}
+
+.calculator-content {
+    width: 100%;
+    min-height: calc(100% - .4rem);
+    padding-top: 1.4rem;
+    background-color: #fff;
+}
+
+.top-main-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 1.4rem;
+    text-align: center;
+    font-size: 0.2rem;
+    background-image: linear-gradient(180deg, #3364E4 0%, #59B0FF 100%);
+    z-index: 6;
+}
+
+.top-main-bg {
+    width: 100%;
+}
+
+.rich-age-box {
+    width: 1.8rem;
+    position: absolute;
+    right: 0.1rem;
+    text-align: center;
+    color: #fff;
+    word-break: break-word;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.rich-age-box .rich-age {
+    display: inline-block;
+    font-size: 0.27rem;
+    font-weight: bold;
+}
+
+.rich-age-text {
+    display: inline-block;
+    font-size: 0.16rem;
+}
+
+.bottom-main-content {
+    padding: 0.16rem 0.16rem .02rem 0.16rem;
+}
+
+.bottom-main-content.loose {
+    padding-top: 0.2rem;
+}
+
+.bottom-main-tip {
+    color: #999999;
+    font-size: 0.15rem;
+    line-height: 0.21rem;
+    margin-bottom: 0.17rem;
+}
+
+.bottom-main-tip.loose {
+    margin-bottom: 0.2rem;
+}
+
+.row-block {
+    width: 100%;
+    margin-bottom: 0.32rem;
+}
+
+.row-block.loose {
+    margin-bottom: 0.25rem;
+}
+
+.input-box {
+    box-sizing: border-box;
+    padding: 0 0.06rem;
+    width: 100%;
+    height: 0.4rem;
+    line-height: 0.4rem;
+    font-size: 0.16rem;
+    overflow: hidden;
+    background-color: #F6F6F6;
+    border-radius: 0.08rem;
+    position: relative;
+}
+
+.input-box-left {
+    color: #2a2a2a;
+    display: inline-block;
+    height: 0.39rem;
+    line-height: 0.39rem;
+    position: absolute;
+    top: 0;
+    left: .12rem;
+}
+
+.input-box-right {
+    position: absolute;
+    top: 0;
+    right: 0.12rem;
+    display: inline-block;
+    vertical-align: middle;
+    width: calc(100% - 1.2rem);
+    text-align: right;
+    height: 0.39rem;
+    line-height: 0.39rem;
+}
+
+.input-box-right.max {
+    width: calc(100% - 1.1rem);
+}
+
+.input-box-right.small {
+    width: calc(100% - 1.3rem);
+}
+
+.input-box-right-input {
+    width: calc(100% - 0.19rem);
+    text-align: right;
+    outline: none;
+    border: none;
+    color: #3364E4;
+    font-size: 0.2rem;
+    height: 0.3rem;
+    line-height: 0.3rem;
+    font-weight: bold;
+    position: absolute;
+    right: 0.16rem;
+    top: .04rem;
+    /* top: 50%; */
+    /* transform: translateY(-50%); */
+    padding: 0 0.04rem 0 0;
+    box-sizing: border-box;
+    letter-spacing: 0.01rem;
+    font-family: PingFangSC-Light, Roboto, HelveticaNeue, Helvetica, Arial, sans-serif;
+    background-color: #F6F6F6;
+}
+
+.input-box-right-input.max {
+    width: calc(100% - 0.18rem);
+}
+
+.input-box-right-unit {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #3364E4;
+    height: 0.39rem;
+    line-height: 0.39rem;
+    text-align: right;
+}
+
+.input-box-right input:focus {
+    outline: none;
+    border: none;
+}
+
+.drag-progress-box {
+    position: relative;
+    width: calc(100% - .24rem);
+    margin-left: .12rem;
+    height: 0.4rem;
+    margin-top: 0.04rem;
+}
+
+.row-block.loose .drag-progress-box {
+    margin-top: 0.15rem;
+}
+
+.drag-progress-box input {
+    display: none;
+}
+
+.inflation-rate-tip {
+    font-size: .13rem;
+    color: #999999;
+    line-height: .16rem;
+    margin-top: .12rem;
+    letter-spacing: 0;
+}
+
+.calc-footer-tip {
+    color: #CCCCCC;
+    font-size: 0.15rem;
+    line-height: 0.18rem;
+    margin-bottom: .14rem;
+}
+
+.calc-footer {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0.16rem 0.12rem;
+    background: #fff;
+    min-height: 1.6rem;
+}
+
+.disclaimer-box {
+    width: 100%;
+    height: .4rem;
+    line-height: .4rem;
+    background-color: #F6F6F6;
+    padding: 0 .12rem 0 .12rem;
+    font-size: .13rem;
+    color: #999999;
+}
+
+/* 滑动条标尺样式 */
+
+.irs-grid-pol {
+    position: absolute;
+    top: 0.17rem;
+    background: #eee;
+    width: 0.01rem;
+    height: 0.05rem;
+}
+
+.irs-grid-pol.small {
+    height: 0.04rem;
+}
+
+.owner-grid-text {
+    display: inline-block;
+    min-width: 0.52rem;
+    text-align: center;
+    position: absolute;
+    font-size: 0.1rem;
+    color: rgba(42, 42, 42, 0.3);
+    top: 0.22rem;
+    transform: translateX(-50%);
+}
+
+
+/* 重置vue-slider-component样式 */
+
+.vue-slider-component {
+    padding: 0.16rem 0 !important;
+}
+
+.vue-slider-component .vue-slider {
+    height: 1px !important;
+    background-color: #eee;
+    margin-top: 0.01rem;
+}
+
+.vue-slider-component .vue-slider-dot {
+    top: -0.16rem !important;
+    left: -0.08rem !important;
+    width: 0.32rem !important;
+    height: 0.32rem !important;
+    background-image: url("https://static.iberhk.com/v2/web/images/calculator/sliderbutton.png");
+    background-position: 0 0;
+    background-size: 100% 100%;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.vue-slider-component .vue-slider-piecewise {
+    background-color: #eee;
+    height: 0 !important;
+}
+
+.vue-slider-component.vue-slider-horizontal .vue-slider-process {
+    background-color: #eee;
+    height: 0 !important;
+}
+
+.vue-slider-component .vue-slider:after {
+    background-color: #eee;
+    height: 0 !important;
+}
+
+#ageSlider.vue-slider-component.vue-slider-horizontal .vue-slider-process {
+    background-color: #3364E4;
+}
+
+
+/* 修改mint Switch组件样式 */
+
+.other-option .mint-switch-core {
+    width: .45rem;
+    height: .26rem;
+    border-radius: .13rem;
+    border: none;
+}
+
+.other-option .mint-switch-core::before {
+    width: .45rem;
+    height: .245rem;
+    background: #FFFFFF;
+    border: .005rem solid #DDDDDD;
+    border-radius: 24px;
+}
+
+.other-option .mint-switch-core::after {
+    width: .27rem;
+    height: .27rem;
+    background: #FFFFFF;
+    margin-top: -.02rem;
+    border-radius: 50%;
+    border: .005rem solid rgba(0, 0, 0, 0.04);
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.15), 0 1px 2px 0 rgba(0, 0, 0, 0.16), 0 4px 2px 0 rgba(0, 0, 0, 0.10);
+}
+
+.other-option .mint-switch-input:checked+.mint-switch-core {
+    border-color: #3852EC;
+    background-color: #3852EC;
+}
+
+/* 修改mint toast提示 */
+.mint-toast.is-placemiddle {
+    transform: translate(-50%, -120%);
+}

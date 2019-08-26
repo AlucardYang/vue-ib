@@ -1,0 +1,67 @@
+.policy {
+    font-size: .14rem;
+    color: #888;
+    line-height: .23rem;
+    font-weight: 100;
+    padding: .2rem 0.20rem;
+    text-align: justify;
+}
+
+.policy>h3:first-child {
+    margin-bottom: .1rem;
+}
+
+.policy h2 {
+    font-size: .16rem;
+    color: #333;
+    font-weight: 100;
+    margin: .05rem 0;
+}
+
+.policy h3,
+.policy h4 {
+    font-size: .14rem;
+    color: #333;
+    font-weight: normal;
+    margin: 0;
+}
+
+.policy p {
+    margin-bottom: .2rem;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.policy li {
+    margin-bottom: .2rem;
+}
+
+.policy li>ul,
+.policy li>ol {
+    margin-left: .2rem;
+    margin-bottom: .2rem;
+}
+
+.policy li>ul>li {
+    list-style: circle;
+}
+
+.policy li>ol>li {
+    list-style: lower-alpha;
+}
+
+.policy table {
+    border: 1px solid #E6E6E6;
+    margin-left: -.2rem;
+    margin-bottom: .2rem;
+}
+
+.policy th {
+    text-align: center;
+}
+
+.policy th,
+.policy td {
+    padding: .12rem;
+    border: 1px solid #E6E6E6;
+}

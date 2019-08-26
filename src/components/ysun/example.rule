@@ -1,0 +1,310 @@
+    <!--页面加载框-->
+    <com-page-loading :params="$root.pageLoading"></com-page-loading>
+    <!-- 黑色背景加载中 -->
+    <com-progress :params="$root.progress"></com-progress>
+    <!--页面Loading组件-->
+    <com-loading :params="$root.loading"></com-loading>
+
+    <!--页面加载框-->
+    <com-page-loading :params="$root.comPageLoadingData"></com-page-loading>
+    <!-- 黑色背景加载中 -->
+    <com-progress :params="$root.comProgressData"></com-progress>
+    <!--页面Loading组件-->
+    <com-loading :params="$root.comLoadingData"></com-loading>
+
+//友盟统计  @PV
+(_czc || []).push(['', '', '']);
+
+
+
+
+//this.getRootUserInfo().then((auth) => {console.log(auth);});
+auth.openid
+{
+  "data":{
+    "c_user_uuid":"56e126e1b2f8d4ce57b319eaf09dd2fe",
+    "avatar":"https://static.iberhk.com/cuser-avatar/v2/2019/07/5d36b48cae35femFXgA.jpeg","openid":"oFxYa55JLDASPSDy-anICmspjQ6c",
+    "username":"he~no123456", 
+    "token":"f246ef3db47afe6cb7ded3b9bd6bc436",
+    "timeLog":{"t1":387,"t2":416,"t3.1":567,"t3.2":616}
+  },
+  "time":1563866252855
+}
+
+
+
+
+v-load-scroll="loadMore" :scroll-distance="calcBottom(1.5)"
+
+<com-more-load v-if='more.state'></com-more-load>
+
+more: {state: false, stop: false, page: 2}
+
+
+    calcBottom(value) {
+      return value * this.font_size;
+    },
+    loadMore() { 
+      agn.getMoreData(this);
+    },
+
+    loadMore() { 
+      if (this.selected == 'agent_2') {
+        agn.getMoreData(this);
+      }
+    },
+
+          let nickname = res.data.baseInfo.nickname;
+          let vDom = document.createElement('span');
+          let vTxt = document.createTextNode(nickname);
+          vDom.appendChild(vTxt);
+          document.body.appendChild(vDom);
+          console.log(vDom);
+
+          function getAttrValue(obj, attr) {
+            let getStyle = null;
+            if (window.getComputedStyle) {
+              getStyle = window.getComputedStyle(obj, null);    // 非IE
+            } else { 
+              getStyle = obj.currentStyle;  // IE
+            } 
+            return getStyle[attr];    
+          }
+          this.$nextTick(()=> {
+            console.log(getAttrValue(vDom, 'width'));
+          });
+
+
+
+
+
+<div class="com-disy" style="min-height:100%;">
+  <div style="flex:1;"></div>
+  <div class="agent-declare">{{plug.agentDeclare(simply)}}</div> 
+</div>
+
+@/assets/images/agent/
+
+if (plug.wx.platform) {
+  const wx = require('weixin-js-sdk');
+  wx.closeWindow();
+  return ;
+}
+  
+//APP数据通信
+window.setTimeout(()=> {
+  postMessage(JSON.stringify({
+    type: 'app_goodsDetail',
+    data: {
+      enter: true
+    }
+  }),'*');
+}, 500);
+
+
+this.getRootUserInfo().then((auth)=> {
+  //auth.c_user_uuid
+});
+
+consultAgent: function() {
+  if (this.inApp) {
+    return ; 
+  }
+  agn.consultAgent({ 
+    object: this,
+    user_uuid: this.user_uuid,
+    answer_uuid: this.user_homepage_template_uuid,
+    from_type: "15",
+    wechat_num: this.agent.baseInfo.wechat_num, 
+    qrcode: this.agent.baseInfo.wx_qrcode_content
+  }); 
+}
+
+/*
+ *@嵌套路由
+ **/
+{
+  path: '/', 
+  component: ,
+  children: [
+    {
+      path: '',
+      redirect: ''
+    }, 
+    {
+      path: '',
+      name: '',
+      component: 
+    }, 
+  ]
+}
+
+{{plug.sm(simply, '')}}
+
+plug.sm(this.simply, '')
+
+this.$toast(plug.sm(this.simply, ''));
+
+
+/*
+ *@弹框层级控制
+ **/
+this.authority.layer = 1;
+this.$parent.authority.layer 
+
+data () {
+  return {
+    authority: {
+      layer: 0  
+    }
+  }
+},
+methods: {
+  action: function() {
+    this.authority.layer = 1;
+  }
+},
+beforeRouteLeave (to, from, next) {
+  if (this.authority.layer > 0) {
+    this.authority.layer -= 1;
+    next(false); 
+    return ;
+  }  
+  next(true);
+},
+created: function() {
+  //
+},
+watch: {
+  "authority.layer": function(val, oldVal) {
+    if (val < 1) {
+      //
+    }
+  }
+}
+
+/*
+ *@AJAX
+ **/  
+this.$http.ajax({
+  base: "",
+  path: "",
+  type: "get",
+  data: {},
+  filter: (res)=> {},
+  intercept: ()=> {},
+  error: (err)=> {},
+  catch: true
+}).then((res)=> {
+  //业务模型
+}).catch((err)=> {
+  //
+});
+
+
+this.$http.ajax({
+  base: "",
+  path: "",
+  type: "get",
+  data: {},
+  intercept: (msg)=> {
+    if (plug.valueValid(msg)) {
+      //
+    }
+  }
+}).then((res)=> {
+  //业务模型 
+});
+
+/*
+ *@模板
+ **/  
+
+<template>
+  <div class="com-frame">
+    <div>
+
+    </div>
+
+    
+
+  </div>
+</template>
+
+
+<script>
+  export default {
+    name: '',
+    data () {
+      return {
+        name: ''
+      }
+    },
+    created () {
+      document.title = "Ysun";
+    },
+    watch: {
+    },
+    mounted: function() { 
+      this.$nextTick(() => { 
+      });
+    },
+    methods: {
+    }
+  }
+</script>
+<style scoped>
+
+</style>
+
+
+<script src="./index.js"></script>
+<style scoped src="./index.css"></style>
+
+
+
+
+<mt-swipe :show-indicators="false" :defaultIndex="0">
+  <mt-swipe-item>
+    <dl>
+      <dt><h3>主页</h3></dt>
+      <dd></dd>
+    </dl>
+  </mt-swipe-item>
+  <mt-swipe-item v-if="plug.valueValid(agent.baseInfo.signature)">
+    <dl>
+      <dt><h3><label v-if="simply">个性签名</label><label v-else>個性簽名</label></h3></dt>
+      <dd></dd>
+    </dl>
+  </mt-swipe-item>
+  <mt-swipe-item v-if="plug.valueValid(agent.baseInfo.abstract)">
+    <dl>
+      <dt><h3><label v-if="simply">个人简介</label><label v-else>個人簡介</label></h3></dt>
+      <dd></dd>
+    </dl>
+  </mt-swipe-item>
+  <mt-swipe-item>
+    <dl>
+      <dt><h3><label v-if="simply">从业经历</label><label v-else>從業經驗</label></h3></dt>
+      <dd></dd>
+    </dl>
+  </mt-swipe-item>
+  <mt-swipe-item>
+    <dl>
+      <dt><h3><label v-if="simply">个人荣誉</label><label v-else>我的榮譽</label></h3></dt>
+      <dd></dd>
+    </dl>
+  </mt-swipe-item>
+  <mt-swipe-item>
+    <dl>
+      <dt><h3><label v-if="simply">个人相簿</label><label v-else>我的相簿</label></h3></dt>
+      <dd></dd>
+    </dl>
+  </mt-swipe-item>
+  <mt-swipe-item>
+    <dl>
+      <dt><h3><label v-if="simply">联系方式</label><label v-else>聯繫方式</label></h3></dt>
+      <dd></dd>
+    </dl>
+  </mt-swipe-item>
+</mt-swipe>

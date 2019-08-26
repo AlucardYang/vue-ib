@@ -1,0 +1,368 @@
+.a-a-m {
+  background-color: #fff;
+}
+dl.theme {
+  width: 100%;
+  background-color: #fff;
+}
+dl.theme:not(.info) {
+  height: 100%;
+}
+dl.theme:not(.info)>dt {
+  z-index: 1;
+  padding: .16rem;
+  padding-top: .4rem;
+  height: 1.3rem;
+}
+dl.theme:not(.info)>dt.scroll {
+  box-shadow: 0 0 .15rem 0 rgba(0, 0, 0, 0.12);
+}
+dl.theme:not(.info)>dd {
+  flex: 1;
+}
+dl.theme:not(.info)>dt h1 {
+  height: .4rem;
+  line-height: .4rem;
+  font-size: .34rem;
+  color: #111;
+}
+dl.theme:not(.info)>dt p {
+  margin-top: .04rem;
+  height: .15rem;
+  line-height: .15rem; 
+  font-size: .13rem;
+  color: #111;
+}
+dl.theme:not(.info)>dt button {
+  position: absolute;
+  top: .42rem;
+  right: .16rem;
+  padding-right: .12rem;
+  padding-left: .12rem;
+  height: .35rem;
+  border-radius: .35rem;
+  background-color: #111;
+  box-shadow: 0 0.05rem 0.1rem 0.02rem rgba(0, 0, 0, .1);
+  font-size: .14rem;
+  color: #fff;
+}
+dl.theme:not(.info)>dt button:active {
+  background-color: #555;
+}
+dl.theme:not(.info)>dt button i {
+  top: .01rem;
+  margin-right: .03rem;
+  font-size: .18rem;
+}
+dl.theme:not(.info)>dd div.contain {
+  padding: .16rem;
+}
+
+/*--个人资料--*/
+dl.info>dt {
+  height: 0;
+  padding-bottom: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: auto 100%;
+}
+dl.info>dt div.triangle {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1.32rem;
+  background-color: #fff;
+}
+dl.info>dt div.triangle:before {
+  content: "";
+  position: absolute;
+  top: -.59rem;
+  left: 0;
+  width: 100%; 
+  height: 0;
+  border: .6rem solid #fff;
+  border-top-color: transparent;
+  border-bottom: 0;
+  border-left-width: 3.75rem;
+}
+dl.info>dt>div.img {
+  position: absolute;
+  bottom: 1.18rem;
+  left: .24rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 100%;
+}
+dl.info>dt>div.img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  box-shadow: 0 .16rem .8rem 0 rgba(27,27,27,0.32);
+}
+dl.info>dt>div.icon {
+  overflow: hidden;
+  position: absolute;
+  bottom: 1.18rem;
+  right: .2rem;
+  width: .52rem;
+  height: .52rem;
+  border-radius: 100%;
+  background-image: linear-gradient(-135deg, #535353 0%, #292929 100%);
+  box-shadow: 0 0 .35rem .02rem rgba(0, 0, 0, .1); 
+}
+dl.info>dt>div.icon i {
+  line-height: .35rem;
+  font-size: .35rem;
+  color: #fff;
+}
+dl.info>dt>div.icon em {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0;
+  transform: rotate(-30deg) translateY(-.5rem);
+  background-color: rgba(250, 250, 250, 0);
+  box-shadow: 0 0 .08rem .02rem #fafafa;
+  animation: emFilter 3s infinite linear;
+}
+@keyframes emFilter {
+  0% {transform: rotate(-30deg) translateY(-.5rem);}
+  100% {transform: rotate(-30deg) translateY(.5rem);}
+}
+dl.info>dd {
+  margin-top: -.95rem;
+}
+dl.info>dd h3 {
+  padding-right: .25rem;
+  padding-left: .25rem;
+  width: 100%;
+  line-height: .3rem;
+  font-size: .24rem;
+  color: #111;
+}
+dl.info>dd h3 em {
+  top: -.04rem;
+  margin-left: .08rem;
+  width: .48rem;
+  line-height: .18rem;
+  border: 1px solid #444;
+  border-radius: .03rem;
+  text-align: center;
+  font-weight: lighter;
+  font-size: .12rem;
+  color: #333;
+}
+dl.info>dd p.position {
+  margin-top: .05rem;
+  padding-right: .25rem;
+  padding-left: .25rem;
+  width: 100%;
+  height: .25rem;
+  line-height: .25rem;
+  font-size: .16rem;
+  color: #333;
+}
+dl.info>dd p.company {
+  padding-right: .25rem;
+  padding-left: .25rem;
+  width: 100%;
+  height: .2rem;
+  line-height: .2rem;
+  font-size: .16rem;
+  color: #333;
+}
+dl.info>dd div.label {
+  margin-top: .15rem;
+  overflow: hidden;
+  width: 100%;
+  height: .7rem;
+}
+dl.info>dd div.autograph {
+  overflow: hidden;
+  margin: .16rem;
+  padding: .16rem .25rem;
+  line-height: .32rem;
+  background-color: #f9f9f9;
+  border-radius: .08rem;
+  font-size: .17rem;
+  color: #111;
+}
+
+
+/*--个性签名--*/
+dl.profile>dt {
+  background-image: url(https://static.iberhk.com/v2/web/images/agent/a_a_m_profile_title.png);
+}
+dl.profile>dd div.contain {
+  min-height: 100%;
+  line-height: .4rem;
+  background-image: url(https://static.iberhk.com/v2/web/images/agent/a_a_m_profile_content.png);
+  font-size: .18rem;
+  color: #111;
+}
+
+
+/*--从业经验--*/
+dl.experience>dt {
+  background-image: url(https://static.iberhk.com/v2/web/images/agent/a_a_m_experience_title.png);
+}
+dl.experience>dd ul {
+  border-left: 1px dashed #ddd;
+  padding-left: .2rem;
+}
+dl.experience>dd ul:before {
+  content: "";
+  position: absolute;
+  left: -.06rem;
+  width: .1rem;
+  height: .4rem;
+  background: #fff;
+}
+dl.experience>dd ul>li {
+  padding: .14rem 0;
+  padding-right: .2rem;
+}
+dl.experience>dd ul>li:before {
+  z-index: 1;
+  content: "";
+  position: absolute;
+  top: .225rem;
+  left: -.27rem;
+  width: .12rem;
+  height: .12rem;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 100%;
+}
+dl.experience>dd ul>li:after {
+  content: "";
+  position: absolute;
+  top: .17rem;
+  left: -.275rem;
+  width: .12rem;
+  height: .25rem;
+  background-color: #fff; 
+}
+dl.experience>dd h3 {
+  line-height: .3rem;
+  font-size: .2rem;
+  color: #111;
+}
+dl.experience>dd p {
+  margin-top: .1rem;
+  margin-bottom: .15rem;
+  line-height: .22rem;
+  font-size: .18rem;
+  color: #333;
+}
+dl.experience>dd div.content {
+  clear: both;
+  line-height: .4rem;
+  font-size: .17rem;
+  color: #333;
+}
+
+
+/*--个人荣誉--*/
+dl.honor>dt {
+  background-image: url(https://static.iberhk.com/v2/web/images/agent/a_a_m_honor_title.png);
+}
+dl.honor>dd div.contain ul>li>span {
+  width: .6rem;
+}
+dl.honor>dd div.contain ul>li:not(:last-child)>span::before {
+  content: "";
+  position: absolute;
+  left: .2rem;
+  width: 0;
+  height: 100%;
+  border-left: 1px dashed #ccc;
+}
+dl.honor>dd div.contain ul>li>span em {
+  height: .42rem;
+  line-height: .42rem;
+  background-color: #fff;
+  font-weight: bold;
+  font-size: .2rem;
+  color: #111;
+}
+dl.honor>dd div.contain ul>li>div {
+  flex: 1;
+  padding-bottom: .5rem;
+}
+dl.honor>dd div.contain ul>li>div h3 {
+  line-height: .32rem;
+  font-size: .2rem;
+  color: #111;
+}
+dl.honor>dd div.contain ul>li>div div {
+  margin-top: .12rem;
+  line-height: .3rem;
+  font-size: .18rem;
+  color: #333;
+}
+
+
+/*--个人相簿--*/
+dl.album>dt {
+  background-image: url(https://static.iberhk.com/v2/web/images/agent/a_a_m_album_title.png);
+}
+dl.album>dd div.album-show {
+  margin-bottom: .5rem;
+}
+dl.album>dd div.album-show:last-child {
+  margin-bottom: 0;
+}
+dl.album>dd div.album-show>p {
+  line-height: .3rem;
+  font-size: .18rem;
+  color: #111;
+}
+dl.album>dd div.album-show>div {
+  margin-top: .12rem;
+  margin-bottom: .12rem;
+}
+dl.album>dd div.album-show>span {
+  line-height: .22rem;
+  font-size: .18rem;
+  color: #333;
+}
+dl.album>dd div.album-show .radius-3-5-6 {
+  border-radius: .04rem;
+}
+dl.album>dd div.album-show .radius {
+  border-radius: .08rem;
+}
+/*1张*/
+dl.album>dd div.album-show ul>li.num-1 {
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+}
+/*2张*/
+dl.album>dd div.album-show ul>li.num-2-4 {
+  float: left;
+  width: 50%;
+  height: 0;
+  padding-bottom: 50%;
+}
+dl.album>dd div.album-show ul>li>div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: .025rem;
+}
+
+
+.agent-declare {
+  padding:.15rem .3rem;
+  line-height:.2rem;
+  background-color:#f6f6f6;
+  box-shadow: 0 0 0.03rem #fff;
+  text-align: center;
+  font-size:.12rem;
+  color:#cdcdcd;
+}
